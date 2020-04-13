@@ -1,0 +1,21 @@
+﻿  asset.cpp
+  assets.cpp
+  blocky_boy.cpp
+  colored_2D_shader_program.cpp
+  engine.cpp
+  game_object.cpp
+C:\Users\norri\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\game_object.cpp(24,82): error C2220: the following warning is treated as an error
+C:\Users\norri\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\game_object.cpp(24,82): warning C4100: 'config': unreferenced formal parameter
+C:\Users\norri\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\game_object.cpp(24,54): warning C4100: 'scene': unreferenced formal parameter
+  game_scene.cpp
+  main.cpp
+  mesh.cpp
+  pointy_head.cpp
+C:\Users\norri\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\pointy_head.cpp(36,39): error C2660: 'Colored_2D_Shader_Program::render': function does not take 3 arguments
+C:\Users\norri\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\colored_2D_shader_program.h(17,7): message : see declaration of 'Colored_2D_Shader_Program::render'
+  square_mesh.cpp
+  scene.cpp
+  shader.cpp
+  shader_program.cpp
+  triangle_mesh.cpp
+  Generating Code...
