@@ -1,8 +1,8 @@
 #pragma once
 
-#include "game_object.h"
+#include "GameObject.h"
 
-class Pointy_Head : public Game_Object
+class Pointy_Head : public GameObject
 {
 public:
 	Pointy_Head(const char* id);

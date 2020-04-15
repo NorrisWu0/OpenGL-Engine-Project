@@ -1,15 +1,19 @@
 #include "game_scene.h"
 #include "pointy_head.h"
-#include "blocky_boy.h"
+#include "Floor.h"
+#include "Bunker.h"
 
 Game_Scene::Game_Scene()
 	: Scene("Game")
 {
-	Pointy_Head* pointy_head = new Pointy_Head("Game_Object.Pointy_Head");
+	Pointy_Head* pointy_head = new Pointy_Head("GameObject.Pointy_Head");
 	_game_objects[pointy_head->id()] = pointy_head;
 
-	Blocky_Boy* blocky_boy = new Blocky_Boy("Game_Object.Blocky_Boy");
-	_game_objects[blocky_boy->id()] = blocky_boy;
+	Floor* _floor = new Floor("GameObject.Floor");
+	_game_objects[_floor->id()] = _floor;
+
+	Bunker* _bunker = new Bunker("GameObject.Bunker");
+	_game_objects[_bunker->id()] = _bunker;
 }
 
 Game_Scene::~Game_Scene()

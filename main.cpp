@@ -1,4 +1,4 @@
-#include "engine.h"
+#include "Engine.h"
 #include "assets.h"
 #include "scene.h"
 #include "configuration.h"
@@ -15,6 +15,7 @@ int main(void)
 {
 	try
 	{
+
 		Configuration* config = new Configuration();
 		Engine* engine        = new Engine("Game", config);
 		Assets* assets        = new Assets();

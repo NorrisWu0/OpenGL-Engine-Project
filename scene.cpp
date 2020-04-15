@@ -1,7 +1,7 @@
 #pragma once
 
-#include "scene.h"
-#include "game_object.h"
+#include "Scene.h"
+#include "GameObject.h"
 
 Scene::Scene(const char* id)
 	: _id(id)
@@ -12,9 +12,9 @@ Scene::~Scene()
 {
 }
 
-std::vector<Game_Object*> Scene::get_game_objects() const
+std::vector<GameObject*> Scene::get_game_objects() const
 {
-	std::vector<Game_Object*> game_objects;
+	std::vector<GameObject*> game_objects;
 
 	for(auto key_value : _game_objects)
 	{
@@ -24,7 +24,7 @@ std::vector<Game_Object*> Scene::get_game_objects() const
 	return game_objects;
 }
 
-Game_Object* Scene::get_game_object(const char* id) const
+GameObject* Scene::get_game_object(const char* id) const
 {
 	if(_game_objects.find(id) == _game_objects.end())
 	{

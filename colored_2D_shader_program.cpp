@@ -40,7 +40,7 @@ void Colored_2D_Shader_Program::Render(const Configuration* config, const Mesh* 
 	expect(transformation_location != -1, "Failed to get transformation_location");
 	glUniformMatrix4fv(transformation_location, 1, GL_FALSE, &(*Transformation)[0][0]);
 
-	if(config->render_wireframe)
+	if(config->renderWireframe)
 	{
 		glDrawArrays(GL_LINE_LOOP, 0, GLsizei(mesh->verticies().size() / 2));
 	}

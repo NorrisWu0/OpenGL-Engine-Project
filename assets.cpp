@@ -3,6 +3,8 @@
 #include "shader_program.h"
 #include "triangle_mesh.h"
 #include "square_mesh.h"
+#include "OctagonMesh.h"
+#include "SemiOctagonMesh.h"
 #include "texture.h"
 #include "colored_2D_shader_program.h"
 
@@ -27,6 +29,12 @@ Assets::Assets()
 
 	Square_Mesh* square_mesh = new Square_Mesh();
 	_assets.insert({square_mesh->id(), square_mesh});
+
+	OctagonMesh* _octagonMesh = new OctagonMesh();
+	_assets.insert({ _octagonMesh->id(), _octagonMesh });
+
+	SemiOctagonMesh* _semiOctagonMesh = new SemiOctagonMesh();
+	_assets.insert({ _semiOctagonMesh->id(), _semiOctagonMesh });
 }
 Assets::~Assets()
 {

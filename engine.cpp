@@ -1,13 +1,13 @@
 #include <algorithm>
 #include <iostream>
 
-#include "engine.h"
-#include "game_object.h"
+#include "Engine.h"
+#include "GameObject.h"
 #include "expectations.h"
 #include "shader_program.h"
 #include "mesh.h"
 #include "configuration.h"
-#include "scene.h"
+#include "Scene.h"
 #include "assets.h"
 #include "texture.h"
 
@@ -27,7 +27,7 @@ Engine::Engine(const char* game_name, Configuration* config)
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-		_window = glfwCreateWindow(config->screen_width, config->screen_height, game_name, NULL, NULL);
+		_window = glfwCreateWindow(config->screenWidth, config->screenHeight, game_name, NULL, NULL);
 		expect(_window != nullptr, "Failed to create GLFW window.");
 		glfwMakeContextCurrent(_window);
 	};
@@ -93,7 +93,7 @@ void Engine::Render(const double _deltaTime, const Assets* assets, const Scene* 
 	const auto prepare = [this]()
 	{
 		glfwSwapBuffers(_window);
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(0.02f, 0.02f, 0.02f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 	};
 	const auto render_gameobjects = [this, assets, config, scene, _deltaTime]()

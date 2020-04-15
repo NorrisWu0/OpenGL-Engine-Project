@@ -2,10 +2,10 @@
 
 struct Configuration
 {
-	bool render_wireframe = false;
+	bool renderWireframe = false;
 
-	int screen_width      = 1600;
-	int screen_height     = 900;
+	int screenWidth      = 1600;
+	int screenHeight     = 900;
 
-	int y_units = 5;
+	int yUnits = 5;
 };
