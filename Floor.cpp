@@ -12,8 +12,8 @@
 
 Floor::Floor(const char* _id) : GameObject(_id)
 {
-	position = glm::vec3(0.f, -0.75f, 0.f);
-	scale = glm::vec3(10.f, 1.25f, 1.f);
+	position = glm::vec3(0, -1.8, 0);
+	scale = glm::vec3(10, 1.25, 1);
 }
 
 Floor::~Floor()

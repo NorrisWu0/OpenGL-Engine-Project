@@ -48,5 +48,5 @@ glm::mat4x4 GameObject::Transformation(const Scene*, const Configuration* _confi
 	const float _xUnits = _aspectRatio * _config->yUnits;
 	glm::mat4 _projectionScale = glm::scale(glm::mat4(1.0f), glm::vec3(2.0f / _xUnits, 2.0f / _config->yUnits, 1));
 
-	return _model * _projectionScale;
+	return _projectionScale * _model;
 }

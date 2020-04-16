@@ -161,5 +161,8 @@
     <Filter Include="Source Files\Assets\Shaders">
       <UniqueIdentifier>{830b8f29-34d8-418d-b9d0-3151c4ce1f48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Assets\Textures">
+      <UniqueIdentifier>{e348cf36-464f-4318-b597-a2ecdb1c4f80}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

@@ -10,7 +10,7 @@
 Pointy_Head::Pointy_Head(const char* id)
 	: GameObject(id)
 {
-	position = glm::vec3(0.5, 0.5, 0);
+	position = glm::vec3(3, 1, 0);
 	scale = glm::vec3(0.5, 0.5, 0.5);
 	totalTime = 0;
 }

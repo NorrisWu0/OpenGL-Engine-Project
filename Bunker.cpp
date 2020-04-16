@@ -9,10 +9,9 @@
 #include <vector>
 #include <math.h>
 
-Bunker::Bunker(const char* _id)
-	: GameObject(_id)
+Bunker::Bunker(const char* _id)	: GameObject(_id)
 {
-	position = glm::vec3(0, -0.5, 0);
+	position = glm::vec3(0, -1.25, 0);
 	scale = glm::vec3(1.5, 1.5, 1);
 }
 
