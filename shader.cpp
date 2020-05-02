@@ -1,4 +1,4 @@
-#pragma once
+ #pragma once
 
 #include "shader.h"
 #include "expectations.h"

@@ -1,8 +1,9 @@
 #pragma once
 #include "ShaderProgram.h"
 
+#include <glm/mat4x4.hpp>
+
 #include <vector>
-#include <glm/gtx/transform.hpp>
 
 class Mesh;
 struct Configuration;

@@ -1,7 +1,10 @@
 #include "Engine.h"
 #include "assets.h"
-#include "scene.h"
 #include "configuration.h"
+
+// Scene
+#include "Scene.h"
+#include "Scene_Display.h"
 #include "game_scene.h"
 
 #include <glfw3.h>
@@ -17,11 +20,11 @@ int main(void)
 	{
 
 		Configuration* config = new Configuration();
-		Engine* engine        = new Engine("Game", config);
+		Engine* engine        = new Engine("OpenGL Project", config);
 		Assets* assets        = new Assets();
 
 		std::stack<Scene*> scenes;
-		scenes.push(new Game_Scene());
+		scenes.push(new Scene_Display());
 
 		const double frames_per_second = 60.0;
 		const double frame_time_s      = 1.0 / frames_per_second;

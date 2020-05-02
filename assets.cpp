@@ -1,13 +1,18 @@
 #include "assets.h"
 #include "shader.h"
+#include "texture.h"
+
+// Shader Programs
 #include "ShaderProgram.h"
+#include "ShaderProgram_Colored2D.h"
+#include "ShaderProgram_Colored3D.h"
+
+// Meshes
 #include "Mesh_Triangle.h"
 #include "Mesh_Square.h"
 #include "Mesh_Octagon.h"
 #include "Mesh_SemiOctagon.h"
-#include "texture.h"
-#include "colored_2D_shader_program.h"
-#include "ShaderProgram_Colored3D.h"
+#include "Mesh_Cube.h"
 
 #define GLEW_STATIC
 #include <glew.h>
@@ -23,7 +28,7 @@ Assets::Assets()
 	Shader* _fragmentShader_Colored2D = new Shader("Shader.Colored.2D.Fragment", "Shaders/colored.2D.fragment_shader.glsl", Shader::Type::Fragment);
 	m_Assets.insert({_fragmentShader_Colored2D->id(), _fragmentShader_Colored2D});
 
-	Colored_2D_Shader_Program* _program_Colored2D = new Colored_2D_Shader_Program(_vertexShader_Colored2D, _fragmentShader_Colored2D);
+	ShaderProgram_Colored2D* _program_Colored2D = new ShaderProgram_Colored2D(_vertexShader_Colored2D, _fragmentShader_Colored2D);
 	m_Assets.insert({_program_Colored2D->id(), _program_Colored2D});
 	
 	#pragma endregion
@@ -35,11 +40,12 @@ Assets::Assets()
 	Shader* _fragmentShader_Colored3D = new Shader("Shader.Colored.3D.Fragment", "Shaders/colored.3D.fragment_shader.glsl", Shader::Type::Fragment);
 	m_Assets.insert({ _fragmentShader_Colored3D->id(), _fragmentShader_Colored3D });
 
-	Colored_2D_Shader_Program* _program_Colored3D = new Colored_2D_Shader_Program(_vertexShader_Colored3D, _fragmentShader_Colored3D);
+	ShaderProgram_Colored3D* _program_Colored3D = new ShaderProgram_Colored3D(_vertexShader_Colored3D, _fragmentShader_Colored3D);
 	m_Assets.insert({ _program_Colored3D->id(), _program_Colored3D });
 
 	#pragma endregion
 
+	#pragma region Meshes
 	Mesh_Triangle* _mesh_Triangle = new Mesh_Triangle();
 	m_Assets.insert({_mesh_Triangle->id(), _mesh_Triangle});
 
@@ -51,6 +57,11 @@ Assets::Assets()
 
 	Mesh_SemiOctagon* _mesh_SemiOctagon = new Mesh_SemiOctagon();
 	m_Assets.insert({ _mesh_SemiOctagon->id(), _mesh_SemiOctagon });
+
+	Mesh_Cube* _mesh_Cube = new Mesh_Cube();
+	m_Assets.insert({ _mesh_Cube->id(), _mesh_Cube });
+
+	#pragma endregion
 }
 Assets::~Assets()
 {

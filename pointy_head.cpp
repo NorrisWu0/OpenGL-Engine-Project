@@ -1,5 +1,5 @@
 #include "pointy_head.h"
-#include "colored_2D_shader_program.h"
+#include "ShaderProgram_Colored2D.h"
 #include "assets.h"
 
 #define GLEW_STATIC
@@ -10,8 +10,8 @@
 Pointy_Head::Pointy_Head(const char* id)
 	: GameObject(id)
 {
-	position = glm::vec3(3, 1, 0);
-	scale = glm::vec3(0.5, 0.5, 0.5);
+	m_Position = glm::vec3(3, 1, 0);
+	m_Scale = glm::vec3(0.5, 0.5, 0.5);
 	totalTime = 0;
 }
 
@@ -28,7 +28,7 @@ void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Co
 void Pointy_Head::Render(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config)
 {
 	totalTime += _deltaTime / 2;
-	rotation = glm::vec3(0, 0, totalTime);
+	m_Rotation = glm::vec3(0, 0, totalTime);
 
 	std::vector<GLfloat> _colors =
 	{
@@ -52,7 +52,7 @@ void Pointy_Head::Render(const double _deltaTime, const Assets* assets, const Sc
 		RTF(192), RTF(230), RTF(237), 1.0f,
 	};
 	
-	const Colored_2D_Shader_Program* _program = (Colored_2D_Shader_Program*)assets->GetAsset("ShaderProgram.2D.Colored");
+	const ShaderProgram_Colored2D* _program = (ShaderProgram_Colored2D*)assets->GetAsset("ShaderProgram.2D.Colored");
 	const Mesh* _mesh = (Mesh*)assets->GetAsset("Mesh.Octagon");
 	glm::mat4 _trans = Transformation(scene, config);
 

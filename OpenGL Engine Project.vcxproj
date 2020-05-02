@@ -150,8 +150,9 @@
   <ItemGroup>
     <ClCompile Include="asset.cpp" />
     <ClCompile Include="assets.cpp" />
+    <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Floor.cpp" />
-    <ClCompile Include="colored_2D_shader_program.cpp" />
+    <ClCompile Include="ShaderProgram_Colored2D.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="game_scene.cpp" />
@@ -173,8 +174,9 @@
   <ItemGroup>
     <ClInclude Include="asset.h" />
     <ClInclude Include="assets.h" />
+    <ClInclude Include="Cube.h" />
     <ClInclude Include="Floor.h" />
-    <ClInclude Include="colored_2D_shader_program.h" />
+    <ClInclude Include="ShaderProgram_Colored2D.h" />
     <ClInclude Include="configuration.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="expectations.h" />
@@ -195,10 +197,10 @@
     <ClInclude Include="Mesh_Triangle.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="colored.3D.fragment_shader.glsl" />
-    <None Include="colored.3D.vertex_shader.glsl" />
     <None Include="Shaders\colored.2D.fragment_shader.glsl" />
     <None Include="Shaders\colored.2D.vertex_shader.glsl" />
+    <None Include="Shaders\colored.3D.fragment_shader.glsl" />
+    <None Include="Shaders\colored.3D.vertex_shader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
