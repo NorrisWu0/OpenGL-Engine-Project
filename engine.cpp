@@ -58,7 +58,16 @@ Engine::Engine(const char* game_name, Configuration* config)
 		};
 
 		glEnable(GL_DEBUG_OUTPUT);
+
 		glDebugMessageCallback(gl_debug_message_callback, 0);
+		
+		glEnable(GL_DEPTH_TEST);
+		glDepthMask(GL_TRUE);
+		glDepthFunc(GL_LESS);
+		
+		glEnable(GL_CULL_FACE);
+		glCullFace(GL_BACK);
+		glFrontFace(GL_CCW);
 	};
 
 	initialize_glfw();
@@ -94,7 +103,7 @@ void Engine::Render(const double _deltaTime, const Assets* assets, const Scene* 
 	{
 		glfwSwapBuffers(_window);
 		glClearColor(0.02f, 0.02f, 0.02f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT);
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	};
 	const auto render_gameobjects = [this, assets, config, scene, _deltaTime]()
 	{
