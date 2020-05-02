@@ -8,5 +8,5 @@ public:
 	Game_Scene();
 	~Game_Scene();
 
-	virtual void update(const double _deltaTime) override;
+	virtual void Update(const double _deltaTime) override;
 };

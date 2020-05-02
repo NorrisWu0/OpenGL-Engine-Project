@@ -156,16 +156,19 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="game_scene.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mesh.cpp" />
+    <ClCompile Include="Mesh.cpp" />
+    <ClCompile Include="Mesh_Cube.cpp" />
     <ClCompile Include="pointy_head.cpp" />
-    <ClCompile Include="OctagonMesh.cpp" />
+    <ClCompile Include="Mesh_Octagon.cpp" />
     <ClCompile Include="Bunker.cpp" />
-    <ClCompile Include="SemiOctagonMesh.cpp" />
-    <ClCompile Include="square_mesh.cpp" />
+    <ClCompile Include="Scene_Display.cpp" />
+    <ClCompile Include="Mesh_SemiOctagon.cpp" />
+    <ClCompile Include="ShaderProgram_Colored3D.cpp" />
+    <ClCompile Include="Mesh_Square.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="shader.cpp" />
-    <ClCompile Include="shader_program.cpp" />
-    <ClCompile Include="triangle_mesh.cpp" />
+    <ClCompile Include="ShaderProgram.cpp" />
+    <ClCompile Include="Mesh_Triangle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asset.h" />
@@ -177,18 +180,23 @@
     <ClInclude Include="expectations.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="game_scene.h" />
-    <ClInclude Include="mesh.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Mesh_Cube.h" />
     <ClInclude Include="pointy_head.h" />
-    <ClInclude Include="OctagonMesh.h" />
+    <ClInclude Include="Mesh_Octagon.h" />
     <ClInclude Include="Bunker.h" />
-    <ClInclude Include="SemiOctagonMesh.h" />
-    <ClInclude Include="square_mesh.h" />
+    <ClInclude Include="Scene_Display.h" />
+    <ClInclude Include="Mesh_SemiOctagon.h" />
+    <ClInclude Include="ShaderProgram_Colored3D.h" />
+    <ClInclude Include="Mesh_Square.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="shader.h" />
-    <ClInclude Include="shader_program.h" />
-    <ClInclude Include="triangle_mesh.h" />
+    <ClInclude Include="ShaderProgram.h" />
+    <ClInclude Include="Mesh_Triangle.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="colored.3D.fragment_shader.glsl" />
+    <None Include="colored.3D.vertex_shader.glsl" />
     <None Include="Shaders\colored.2D.fragment_shader.glsl" />
     <None Include="Shaders\colored.2D.vertex_shader.glsl" />
   </ItemGroup>

@@ -17,6 +17,7 @@ Pointy_Head::Pointy_Head(const char* id)
 
 Pointy_Head::~Pointy_Head()
 {
+
 }
 
 void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Configuration*)
@@ -51,8 +52,8 @@ void Pointy_Head::Render(const double _deltaTime, const Assets* assets, const Sc
 		RTF(192), RTF(230), RTF(237), 1.0f,
 	};
 	
-	const Colored_2D_Shader_Program* _program = (Colored_2D_Shader_Program*)assets->get_asset("Shader_Program.2D.Colored");
-	const Mesh* _mesh = (Mesh*)assets->get_asset("Mesh.Octagon");
+	const Colored_2D_Shader_Program* _program = (Colored_2D_Shader_Program*)assets->GetAsset("ShaderProgram.2D.Colored");
+	const Mesh* _mesh = (Mesh*)assets->GetAsset("Mesh.Octagon");
 	glm::mat4 _trans = Transformation(scene, config);
 
 	_program->Render(config, _mesh, &_colors, &_trans);

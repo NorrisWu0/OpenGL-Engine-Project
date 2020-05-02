@@ -33,7 +33,7 @@ int main(void)
 			frame_start_time_s                     = glfwGetTime();
 
 			glfwPollEvents();
-			scenes.top()->update(previous_frame_duration_s);
+			scenes.top()->Update(previous_frame_duration_s);
 			engine->simulate(previous_frame_duration_s, assets, scenes.top(), config);
 
 			const double current_time_s           = glfwGetTime();

@@ -23,7 +23,7 @@ void Bunker::SimulateAI(const double, const Assets*, const Scene*, const Configu
 {
 }
 
-void Bunker::Render(const double, const Assets* _assets, const Scene* _scene, const Configuration* _config)
+void Bunker::Render(const double, const Assets* m_Assets, const Scene* _scene, const Configuration* _config)
 {
 	std::vector<GLfloat> _colors = {
 		RTF(66), RTF(66), RTF(66), 1.0f,
@@ -43,8 +43,8 @@ void Bunker::Render(const double, const Assets* _assets, const Scene* _scene, co
 		RTF(66), RTF(66), RTF(66), 1.0f,
 	};
 
-	const Colored_2D_Shader_Program* _program = (Colored_2D_Shader_Program*)_assets->get_asset("Shader_Program.2D.Colored");
-	const Mesh* _mesh = (Mesh*)_assets->get_asset("Mesh.Bunker");
+	const Colored_2D_Shader_Program* _program = (Colored_2D_Shader_Program*)m_Assets->GetAsset("ShaderProgram.2D.Colored");
+	const Mesh* _mesh = (Mesh*)m_Assets->GetAsset("Mesh.Bunker");
 	glm::mat4 _trans = Transformation(_scene, _config);
 
 	_program->Render(_config, _mesh, &_colors, &_trans);

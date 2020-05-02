@@ -13,7 +13,7 @@ public:
 	Scene(const char* id);
 	~Scene();
 
-	virtual void update(const double _deltaTime) = 0;
+	virtual void Update(const double _deltaTime) = 0;
 
 	GameObject* get_game_object(const char* id) const;
 	std::vector<GameObject*> get_game_objects() const;

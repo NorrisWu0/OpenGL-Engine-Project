@@ -4,7 +4,7 @@
 #include "Engine.h"
 #include "GameObject.h"
 #include "expectations.h"
-#include "shader_program.h"
+#include "ShaderProgram.h"
 #include "mesh.h"
 #include "configuration.h"
 #include "Scene.h"

@@ -12,20 +12,20 @@ Mesh::~Mesh()
 
 const std::vector<GLfloat> Mesh::verticies() const
 {
-	return _verticies;
+	return m_Verticies;
 }
 
 const std::vector<GLfloat> Mesh::texture_coordinates() const
 {
-	return _texture_coordinates;
+	return m_TextureCoordinates;
 }
 
 const std::vector<GLfloat> Mesh::indicies() const
 {
-	return _indicies;
+	return m_Indicies;
 }
 
 const std::vector<GLfloat> Mesh::normals() const
 {
-	return _normals;
+	return m_Normals;
 }

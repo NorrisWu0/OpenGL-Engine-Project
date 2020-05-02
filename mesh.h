@@ -19,8 +19,8 @@ public:
 	const std::vector<GLfloat> normals()             const;
 	
 protected:
-	std::vector<GLfloat> _verticies;
-	std::vector<GLfloat> _texture_coordinates;
-	std::vector<GLfloat> _indicies;
-	std::vector<GLfloat> _normals;
+	std::vector<GLfloat> m_Verticies;
+	std::vector<GLfloat> m_TextureCoordinates;
+	std::vector<GLfloat> m_Indicies;
+	std::vector<GLfloat> m_Normals;
 };

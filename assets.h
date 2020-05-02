@@ -11,8 +11,8 @@ public:
 	Assets();
 	~Assets();
 
-	const Asset* get_asset(const char* id) const;
+	const Asset* GetAsset(const char* id) const;
 
 private:
-	std::map<const char*, const Asset*> _assets;
+	std::map<const char*, const Asset*> m_Assets;
 };

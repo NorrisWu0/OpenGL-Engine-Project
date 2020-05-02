@@ -1,6 +1,6 @@
 #pragma once
 
-#include "shader_program.h"
+#include "ShaderProgram.h"
 
 #include <vector>
 #include <glm/gtx/transform.hpp>
@@ -8,7 +8,7 @@
 class Mesh;
 struct Configuration;
 
-class Colored_2D_Shader_Program : public Shader_Program
+class Colored_2D_Shader_Program : public ShaderProgram
 {
 public:
 	Colored_2D_Shader_Program(const Shader* vertex_shader, const Shader* fragment_shader);

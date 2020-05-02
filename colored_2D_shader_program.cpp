@@ -4,7 +4,7 @@
 #include "configuration.h"
 
 Colored_2D_Shader_Program::Colored_2D_Shader_Program(const Shader* vertex_shader, const Shader* fragment_shader)
-	: Shader_Program("Shader_Program.2D.Colored", vertex_shader, fragment_shader)
+	: ShaderProgram("ShaderProgram.2D.Colored", vertex_shader, fragment_shader)
 {
 }
 Colored_2D_Shader_Program::~Colored_2D_Shader_Program()
