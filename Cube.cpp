@@ -8,6 +8,7 @@
 
 Cube::Cube(const char* _id) : GameObject(_id)
 {
+	m_Rotation = glm::vec3(0.3f, -0.5f, 0.f);
 }
 
 Cube::~Cube()
@@ -18,13 +19,13 @@ void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configura
 {
 }
 
-void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
+void Cube::Render(const double, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {
-	static double _totalTime = 0;
+	/*static double _totalTime = 0;
 	_totalTime += _deltaTime;
 
 	m_Rotation.x = -(float)_totalTime;
-	m_Rotation.y = -(float)_totalTime / 4;
+	m_Rotation.y = -(float)_totalTime / 4;*/
 
 	std::vector<GLfloat> _colors;
 	

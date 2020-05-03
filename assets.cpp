@@ -22,10 +22,10 @@
 Assets::Assets()
 {
 	#pragma region Colored 2D Shader Program
-	Shader* _vertexShader_Colored2D = new Shader("Shader.Colored.2D.Vertex", "Shaders/colored.2D.vertex_shader.glsl", Shader::Type::Vertex);
+	Shader* _vertexShader_Colored2D = new Shader("Shader.Colored.2D.Vertex", "Shaders/Colored.2D.VertexShader.glsl", Shader::Type::Vertex);
 	m_Assets.insert({_vertexShader_Colored2D->id(), _vertexShader_Colored2D});
 
-	Shader* _fragmentShader_Colored2D = new Shader("Shader.Colored.2D.Fragment", "Shaders/colored.2D.fragment_shader.glsl", Shader::Type::Fragment);
+	Shader* _fragmentShader_Colored2D = new Shader("Shader.Colored.2D.Fragment", "Shaders/Colored.2D.FragmentShader.glsl", Shader::Type::Fragment);
 	m_Assets.insert({_fragmentShader_Colored2D->id(), _fragmentShader_Colored2D});
 
 	ShaderProgram_Colored2D* _program_Colored2D = new ShaderProgram_Colored2D(_vertexShader_Colored2D, _fragmentShader_Colored2D);
@@ -34,14 +34,26 @@ Assets::Assets()
 	#pragma endregion
 
 	#pragma region Colored 3D Shader Program
-	Shader* _vertexShader_Colored3D = new Shader("Shader.Colored.3D.Vertex", "Shaders/colored.3D.vertex_shader.glsl", Shader::Type::Vertex);
+	Shader* _vertexShader_Colored3D = new Shader("Shader.Colored.3D.Vertex", "Shaders/Colored.3D.VertexShader.glsl", Shader::Type::Vertex);
 	m_Assets.insert({ _vertexShader_Colored3D->id(), _vertexShader_Colored3D });
 
-	Shader* _fragmentShader_Colored3D = new Shader("Shader.Colored.3D.Fragment", "Shaders/colored.3D.fragment_shader.glsl", Shader::Type::Fragment);
+	Shader* _fragmentShader_Colored3D = new Shader("Shader.Colored.3D.Fragment", "Shaders/Colored.3D.FragmentShader.glsl", Shader::Type::Fragment);
 	m_Assets.insert({ _fragmentShader_Colored3D->id(), _fragmentShader_Colored3D });
 
 	ShaderProgram_Colored3D* _program_Colored3D = new ShaderProgram_Colored3D(_vertexShader_Colored3D, _fragmentShader_Colored3D);
 	m_Assets.insert({ _program_Colored3D->id(), _program_Colored3D });
+
+	#pragma endregion
+
+	#pragma region Textured 3D Shader Program
+	Shader* _vertexShader_Textured3D = new Shader("Shader.Textured.3D.Vertex", "Shaders/Textured.3D.VertexShader.glsl", Shader::Type::Vertex);
+	m_Assets.insert({ _vertexShader_Textured3D->id(), _vertexShader_Textured3D });
+
+	Shader* _fragmentShader_Textured3D = new Shader("Shader.Textured.3D.Fragment", "Shaders/Textured.3D.FragmentShader.glsl", Shader::Type::Fragment);
+	m_Assets.insert({ _fragmentShader_Textured3D->id(), _fragmentShader_Textured3D });
+
+	ShaderProgram_Colored3D* _program_Textured3D = new ShaderProgram_Colored3D(_vertexShader_Textured3D, _fragmentShader_Textured3D);
+	m_Assets.insert({ _program_Textured3D->id(), _program_Textured3D });
 
 	#pragma endregion
 
@@ -62,7 +74,9 @@ Assets::Assets()
 	m_Assets.insert({ _mesh_Cube->id(), _mesh_Cube });
 
 	#pragma endregion
+
 }
+
 Assets::~Assets()
 {
 }

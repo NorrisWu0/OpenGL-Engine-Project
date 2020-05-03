@@ -59,6 +59,9 @@
     <ClCompile Include="Cube.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="ShaderProgram_Textured3D.cpp">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointy_head.h">
@@ -130,20 +133,9 @@
     <ClInclude Include="Cube.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Shaders\colored.2D.vertex_shader.glsl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Shaders\colored.2D.fragment_shader.glsl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Shaders\colored.3D.fragment_shader.glsl">
-      <Filter>Resource Files</Filter>
-    </None>
-    <None Include="Shaders\colored.3D.vertex_shader.glsl">
-      <Filter>Resource Files</Filter>
-    </None>
+    <ClInclude Include="ShaderProgram_Textured3D.h">
+      <Filter>Header Files\Assets\ShaderPrograms</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -194,5 +186,25 @@
     <Filter Include="Source Files\Assets\Textures">
       <UniqueIdentifier>{e348cf36-464f-4318-b597-a2ecdb1c4f80}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Shaders\Colored.2D.FragmentShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Shaders\Colored.2D.VertexShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Shaders\Colored.3D.FragmentShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Shaders\Colored.3D.VertexShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Shaders\Textured.3D.FragmentShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Shaders\Textured.3D.VertexShader.glsl">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

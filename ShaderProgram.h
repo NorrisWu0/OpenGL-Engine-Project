@@ -15,10 +15,10 @@ public:
 	ShaderProgram(const char* id, const Shader* vertex_shader, const Shader* fragment_shader);
 	~ShaderProgram();
 
-	const GLuint program() const;
-	const GLuint vao()     const;
+	const GLuint GetProgram() const;
+	const GLuint GetVAO()     const;
 
 private:
-	GLuint _program;
-	GLuint _vao;
+	GLuint m_Program;
+	GLuint m_VAO;
 };

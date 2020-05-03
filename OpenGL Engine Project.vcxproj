@@ -170,6 +170,7 @@
     <ClCompile Include="shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="Mesh_Triangle.cpp" />
+    <ClCompile Include="ShaderProgram_Textured3D.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="asset.h" />
@@ -195,12 +196,15 @@
     <ClInclude Include="shader.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Mesh_Triangle.h" />
+    <ClInclude Include="ShaderProgram_Textured3D.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Shaders\colored.2D.fragment_shader.glsl" />
-    <None Include="Shaders\colored.2D.vertex_shader.glsl" />
-    <None Include="Shaders\colored.3D.fragment_shader.glsl" />
-    <None Include="Shaders\colored.3D.vertex_shader.glsl" />
+    <None Include="Shaders\Colored.2D.FragmentShader.glsl" />
+    <None Include="Shaders\Colored.2D.VertexShader.glsl" />
+    <None Include="Shaders\Colored.3D.FragmentShader.glsl" />
+    <None Include="Shaders\Colored.3D.VertexShader.glsl" />
+    <None Include="Shaders\Textured.3D.FragmentShader.glsl" />
+    <None Include="Shaders\Textured.3D.VertexShader.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
