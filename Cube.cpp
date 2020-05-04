@@ -1,6 +1,7 @@
 #pragma once
 #include "Cube.h"
 #include "ShaderProgram_Colored3D.h"
+#include "ShaderProgram_Textured3D.h"
 #include "assets.h"
 
 #define GLEW_STATIC
@@ -8,7 +9,6 @@
 
 Cube::Cube(const char* _id) : GameObject(_id)
 {
-	m_Rotation = glm::vec3(0.3f, -0.5f, 0.f);
 }
 
 Cube::~Cube()
@@ -19,68 +19,23 @@ void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configura
 {
 }
 
-void Cube::Render(const double, const Assets* _assets, const Scene* _scene, const Configuration* _config)
+void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {
-	/*static double _totalTime = 0;
+	static double _totalTime = 0;
 	_totalTime += _deltaTime;
 
 	m_Rotation.x = -(float)_totalTime;
-	m_Rotation.y = -(float)_totalTime / 4;*/
-
-	std::vector<GLfloat> _colors;
-	
-	auto _red = {1.f, 0.f, 0.f, 1.f};
-	auto _green = {0.f, 1.f, 0.f, 1.f};
-	auto _blue = {0.f, 0.f, 1.f, 1.f};
-	auto _white = {1.f, 1.f, 1.f, 1.f};
-
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-	_colors.insert(_colors.end(), _blue);
-
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-	_colors.insert(_colors.end(), _red);
-
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
-	_colors.insert(_colors.end(), _green);
+	m_Rotation.y = -(float)_totalTime / 4;
 
 
-	const ShaderProgram_Colored3D* _program = (ShaderProgram_Colored3D*)_assets->GetAsset("ShaderProgram.3D.Colored");
+
+	//const ShaderProgram_Colored3D* _program = (ShaderProgram_Colored3D*)_assets->GetAsset("ShaderProgram.3D.Colored");
+	const ShaderProgram_Textured3D* _program = (ShaderProgram_Textured3D*)_assets->GetAsset("ShaderProgram.3D.Textured");
+	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.MarkedCrate");
+
 	const Mesh* _mesh = (Mesh*)_assets->GetAsset("Mesh.Cube");
 	glm::mat4 _trans = Transformation(_scene, _config);
 
-	_program->Render(_config, _mesh, &_colors, &_trans);
+	_program->Render(_config, _mesh, _texture, &_trans);
 
 }

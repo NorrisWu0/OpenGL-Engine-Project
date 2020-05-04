@@ -38,21 +38,6 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
-    <ClCompile Include="Mesh_SemiOctagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_Octagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_Cube.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_Square.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_Triangle.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
     <ClCompile Include="ShaderProgram_Colored2D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClCompile>
@@ -61,6 +46,30 @@
     </ClCompile>
     <ClCompile Include="ShaderProgram_Textured3D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Source Files\Assets\Textures</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Pentagon.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Triangle.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Cube.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Octagon.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_SemiOctagon.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Square.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Triangle.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -112,21 +121,6 @@
     <ClInclude Include="Mesh.h">
       <Filter>Header Files\Assets\Meshes</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_Octagon.h">
-      <Filter>Header Files\Assets\Meshes</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_SemiOctagon.h">
-      <Filter>Header Files\Assets\Meshes</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_Cube.h">
-      <Filter>Header Files\Assets\Meshes</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_Square.h">
-      <Filter>Header Files\Assets\Meshes</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_Triangle.h">
-      <Filter>Header Files\Assets\Meshes</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderProgram_Colored2D.h">
       <Filter>Header Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
@@ -135,6 +129,30 @@
     </ClInclude>
     <ClInclude Include="ShaderProgram_Textured3D.h">
       <Filter>Header Files\Assets\ShaderPrograms</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Header Files\Assets\Textures</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Pentagon.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Triangle.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Cube.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Octagon.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_SemiOctagon.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Square.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Triangle.h">
+      <Filter>Header Files\Assets\Meshes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -186,18 +204,21 @@
     <Filter Include="Source Files\Assets\Textures">
       <UniqueIdentifier>{e348cf36-464f-4318-b597-a2ecdb1c4f80}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Assets\Textures">
+      <UniqueIdentifier>{99298acb-bc07-456f-aa07-518b7ee83b63}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Colored.2D.FragmentShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Shaders\Colored.2D.VertexShader.glsl">
+    <None Include="Shaders\Colored.3D.VertexShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="Shaders\Colored.3D.FragmentShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="Shaders\Colored.3D.VertexShader.glsl">
+    <None Include="Shaders\Colored.2D.VertexShader.glsl">
       <Filter>Resource Files</Filter>
     </None>
     <None Include="Shaders\Textured.3D.FragmentShader.glsl">

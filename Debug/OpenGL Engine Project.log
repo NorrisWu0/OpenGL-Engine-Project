@@ -1,0 +1,70 @@
+﻿  ShaderProgram_Textured3D.cpp
+assets.obj : error LNK2019: unresolved external symbol "public: __thiscall Texture::Texture(char const *,char const *)" (??0Texture@@QAE@PBD0@Z) referenced in function "public: __thiscall Assets::Assets(void)" (??0Assets@@QAE@XZ)
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewBindBuffer
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewBindBuffer
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewBindBuffer
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewBufferData
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewBufferData
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewBufferData
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewDeleteBuffers
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewDeleteBuffers
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewDeleteBuffers
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewGenBuffers
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewGenBuffers
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewGenBuffers
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewEnableVertexAttribArray
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewEnableVertexAttribArray
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewEnableVertexAttribArray
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewGetAttribLocation
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewGetAttribLocation
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewGetAttribLocation
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewGetUniformLocation
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewGetUniformLocation
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewGetUniformLocation
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewUniformMatrix4fv
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewUniformMatrix4fv
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewUniformMatrix4fv
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewUseProgram
+Engine.obj : error LNK2001: unresolved external symbol ___glewUseProgram
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewUseProgram
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewUseProgram
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewVertexAttribPointer
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewVertexAttribPointer
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewVertexAttribPointer
+ShaderProgram_Colored2D.obj : error LNK2001: unresolved external symbol ___glewBindVertexArray
+Engine.obj : error LNK2001: unresolved external symbol ___glewBindVertexArray
+ShaderProgram_Colored3D.obj : error LNK2001: unresolved external symbol ___glewBindVertexArray
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewBindVertexArray
+Engine.obj : error LNK2019: unresolved external symbol _glewInit@0 referenced in function "public: void __thiscall <lambda_52174ed03707c1072eff7f9ce5fe84ca>::operator()(void)const " (??R<lambda_52174ed03707c1072eff7f9ce5fe84ca>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glewGetErrorString@4 referenced in function "public: void __thiscall <lambda_52174ed03707c1072eff7f9ce5fe84ca>::operator()(void)const " (??R<lambda_52174ed03707c1072eff7f9ce5fe84ca>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glfwInit referenced in function "public: void __thiscall <lambda_2f03597400ae6f134633022457b5924a>::operator()(void)const " (??R<lambda_2f03597400ae6f134633022457b5924a>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glfwWindowHint referenced in function "public: void __thiscall <lambda_2f03597400ae6f134633022457b5924a>::operator()(void)const " (??R<lambda_2f03597400ae6f134633022457b5924a>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glfwCreateWindow referenced in function "public: void __thiscall <lambda_2f03597400ae6f134633022457b5924a>::operator()(void)const " (??R<lambda_2f03597400ae6f134633022457b5924a>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glfwMakeContextCurrent referenced in function "public: void __thiscall <lambda_2f03597400ae6f134633022457b5924a>::operator()(void)const " (??R<lambda_2f03597400ae6f134633022457b5924a>@@QBEXXZ)
+Engine.obj : error LNK2019: unresolved external symbol _glfwSwapBuffers referenced in function "public: void __thiscall <lambda_6f0ec72bcaa1a6fd7045b1a35f63f6b2>::operator()(void)const " (??R<lambda_6f0ec72bcaa1a6fd7045b1a35f63f6b2>@@QBEXXZ)
+Engine.obj : error LNK2001: unresolved external symbol ___glewDebugMessageCallback
+Engine.obj : error LNK2001: unresolved external symbol _glewExperimental
+main.obj : error LNK2019: unresolved external symbol _glfwWindowShouldClose referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwPollEvents referenced in function _main
+main.obj : error LNK2019: unresolved external symbol _glfwGetTime referenced in function _main
+shader.obj : error LNK2001: unresolved external symbol ___glewCompileShader
+shader.obj : error LNK2001: unresolved external symbol ___glewCreateShader
+shader.obj : error LNK2001: unresolved external symbol ___glewGetShaderInfoLog
+shader.obj : error LNK2001: unresolved external symbol ___glewGetShaderiv
+shader.obj : error LNK2001: unresolved external symbol ___glewShaderSource
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewAttachShader
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewCreateProgram
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewGetProgramInfoLog
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewGetProgramiv
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewLinkProgram
+ShaderProgram.obj : error LNK2001: unresolved external symbol ___glewGenVertexArrays
+ShaderProgram_Textured3D.obj : error LNK2019: unresolved external symbol "public: unsigned char const * __thiscall Texture::data(void)const " (?data@Texture@@QBEPBEXZ) referenced in function "public: void __thiscall ShaderProgram_Textured3D::Render(struct Configuration const *,class Mesh const *,class Texture const *,struct glm::mat<4,4,float,0> const *)const " (?Render@ShaderProgram_Textured3D@@QBEXPBUConfiguration@@PBVMesh@@PBVTexture@@PBU?$mat@$03$03M$0A@@glm@@@Z)
+ShaderProgram_Textured3D.obj : error LNK2019: unresolved external symbol "public: int const __thiscall Texture::width(void)const " (?width@Texture@@QBE?BHXZ) referenced in function "public: void __thiscall ShaderProgram_Textured3D::Render(struct Configuration const *,class Mesh const *,class Texture const *,struct glm::mat<4,4,float,0> const *)const " (?Render@ShaderProgram_Textured3D@@QBEXPBUConfiguration@@PBVMesh@@PBVTexture@@PBU?$mat@$03$03M$0A@@glm@@@Z)
+ShaderProgram_Textured3D.obj : error LNK2019: unresolved external symbol "public: int const __thiscall Texture::height(void)const " (?height@Texture@@QBE?BHXZ) referenced in function "public: void __thiscall ShaderProgram_Textured3D::Render(struct Configuration const *,class Mesh const *,class Texture const *,struct glm::mat<4,4,float,0> const *)const " (?Render@ShaderProgram_Textured3D@@QBEXPBUConfiguration@@PBVMesh@@PBVTexture@@PBU?$mat@$03$03M$0A@@glm@@@Z)
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewActiveTexture
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewUniform1i
+ShaderProgram_Textured3D.obj : error LNK2001: unresolved external symbol ___glewGenerateMipmap
+Dependencies\glew-2.1.0\lib\Release\x64\glew32s.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+Dependencies\glew-2.1.0\lib\Release\x64\glew32.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019\glfw3.lib : warning LNK4272: library machine type 'x64' conflicts with target machine type 'x86'
+C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\OpenGL Engine Project\Debug\OpenGL Engine Project.exe : fatal error LNK1120: 41 unresolved externals

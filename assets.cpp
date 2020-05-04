@@ -6,13 +6,14 @@
 #include "ShaderProgram.h"
 #include "ShaderProgram_Colored2D.h"
 #include "ShaderProgram_Colored3D.h"
+#include "ShaderProgram_Textured3D.h"
 
 // Meshes
-#include "Mesh_Triangle.h"
-#include "Mesh_Square.h"
-#include "Mesh_Octagon.h"
-#include "Mesh_SemiOctagon.h"
-#include "Mesh_Cube.h"
+#include "Mesh_2D_Triangle.h"
+#include "Mesh_2D_Square.h"
+#include "Mesh_2D_Octagon.h"
+#include "Mesh_2D_SemiOctagon.h"
+#include "Mesh_3D_Cube.h"
 
 #define GLEW_STATIC
 #include <glew.h>
@@ -52,26 +53,35 @@ Assets::Assets()
 	Shader* _fragmentShader_Textured3D = new Shader("Shader.Textured.3D.Fragment", "Shaders/Textured.3D.FragmentShader.glsl", Shader::Type::Fragment);
 	m_Assets.insert({ _fragmentShader_Textured3D->id(), _fragmentShader_Textured3D });
 
-	ShaderProgram_Colored3D* _program_Textured3D = new ShaderProgram_Colored3D(_vertexShader_Textured3D, _fragmentShader_Textured3D);
+	ShaderProgram_Textured3D* _program_Textured3D = new ShaderProgram_Textured3D(_vertexShader_Textured3D, _fragmentShader_Textured3D);
 	m_Assets.insert({ _program_Textured3D->id(), _program_Textured3D });
 
 	#pragma endregion
 
 	#pragma region Meshes
-	Mesh_Triangle* _mesh_Triangle = new Mesh_Triangle();
-	m_Assets.insert({_mesh_Triangle->id(), _mesh_Triangle});
+	Mesh_2D_Triangle* _mesh_2D_Triangle = new Mesh_2D_Triangle();
+	m_Assets.insert({ _mesh_2D_Triangle->id(), _mesh_2D_Triangle });
 
-	Mesh_Square* _mesh_Square = new Mesh_Square();
-	m_Assets.insert({_mesh_Square->id(), _mesh_Square});
+	Mesh_2D_Square* _mesh_2D_Square = new Mesh_2D_Square();
+	m_Assets.insert({ _mesh_2D_Square->id(), _mesh_2D_Square });
 
-	Mesh_Octagon* _mesh_Octagon = new Mesh_Octagon();
-	m_Assets.insert({ _mesh_Octagon->id(), _mesh_Octagon });
+	Mesh_2D_Octagon* _mesh_2D_Octagon = new Mesh_2D_Octagon();
+	m_Assets.insert({ _mesh_2D_Octagon->id(), _mesh_2D_Octagon });
 
-	Mesh_SemiOctagon* _mesh_SemiOctagon = new Mesh_SemiOctagon();
-	m_Assets.insert({ _mesh_SemiOctagon->id(), _mesh_SemiOctagon });
+	Mesh_2D_SemiOctagon* _mesh_2D_SemiOctagon = new Mesh_2D_SemiOctagon();
+	m_Assets.insert({ _mesh_2D_SemiOctagon->id(), _mesh_2D_SemiOctagon });
 
-	Mesh_Cube* _mesh_Cube = new Mesh_Cube();
-	m_Assets.insert({ _mesh_Cube->id(), _mesh_Cube });
+	Mesh_3D_Cube* _mesh_3D_Cube = new Mesh_3D_Cube();
+	m_Assets.insert({ _mesh_3D_Cube->id(), _mesh_3D_Cube });
+
+	#pragma endregion
+
+	#pragma region Textures
+	Texture* _crate = new Texture("Texture.Crate", "Assets/Texture.Crate.jpg");
+	m_Assets.insert({ _crate->id(), _crate });
+
+	Texture* _markedCrate = new Texture("Texture.MarkedCrate", "Assets/Texture.Crate_With_Sides_Marked.jpg");
+	m_Assets.insert({ _markedCrate->id(), _markedCrate });
 
 	#pragma endregion
 

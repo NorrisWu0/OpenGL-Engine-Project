@@ -7,5 +7,6 @@ out vec4 fragmentColor;
 
 void main()
 {
-    fragmentColor = interpolatedTextureCoordinate;
+    vec4 _imageTextel = texture(image, interpolatedTextureCoordinate);
+    fragmentColor = _imageTextel;
 }
