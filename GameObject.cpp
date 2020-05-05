@@ -49,11 +49,18 @@ glm::mat4x4 GameObject::Transformation(const Scene*, const Configuration* _confi
 	glm::mat4 _model = _position * _scale * _rotation;
 	
 	// Camera Transform
-
+	
 	// Projection - scale objects on x axis
-	const float _aspectRatio = float(_config->screenWidth) / float(_config->screenHeight);
+	const float _aspectRatio = float(_config->screenWidth) / _config->screenHeight;
 	const float _xUnits = _aspectRatio * _config->yUnits;
-	glm::mat4 _projectionScale = glm::scale(glm::mat4(1.0f), glm::vec3(2.0f / _xUnits, 2.0f / _config->yUnits, 1));
+	const float _yUnits =  float(_config->yUnits);
+
+	glm::mat4 _projectionScale;
+	
+	if (_config->_projection == Configuration::Projection::Orthographic)
+		_projectionScale = glm::ortho(-_xUnits / 2, _xUnits / 2, -_yUnits / 2, _yUnits / 2, 0.1f, float(_config->zUnits));
+	else if (_config->_projection == Configuration::Projection::Perspective)
+		_projectionScale = glm::perspectiveFov(glm::radians(90.f), float(_config->screenWidth), float(_config->screenHeight), 0.1f, float(_config->zUnits));
 
 	return _projectionScale * _model;
 }

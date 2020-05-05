@@ -76,9 +76,6 @@
     <ClInclude Include="pointy_head.h">
       <Filter>Header Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="configuration.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="assets.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -153,6 +150,9 @@
     </ClInclude>
     <ClInclude Include="Mesh_2D_Triangle.h">
       <Filter>Header Files\Assets\Meshes</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

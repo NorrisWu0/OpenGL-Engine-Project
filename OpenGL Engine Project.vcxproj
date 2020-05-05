@@ -189,7 +189,7 @@
     <ClInclude Include="Mesh_3D_Pentagon.h" />
     <ClInclude Include="Mesh_3D_Triangle.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />
-    <ClInclude Include="configuration.h" />
+    <ClInclude Include="Configuration.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="expectations.h" />
     <ClInclude Include="GameObject.h" />

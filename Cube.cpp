@@ -9,6 +9,7 @@
 
 Cube::Cube(const char* _id) : GameObject(_id)
 {
+	m_Position.z = -5.0f;
 }
 
 Cube::~Cube()
