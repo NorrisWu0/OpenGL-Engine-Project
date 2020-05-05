@@ -20,7 +20,7 @@ Floor::~Floor()
 {
 }
 
-void Floor::SimulateAI(const double, const Assets*, const Scene*, const Configuration*)
+void Floor::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
 {
 }
 

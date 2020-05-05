@@ -18,7 +18,7 @@ Bunker::~Bunker()
 {
 }
 
-void Bunker::SimulateAI(const double, const Assets*, const Scene*, const Configuration*)
+void Bunker::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
 {
 }
 

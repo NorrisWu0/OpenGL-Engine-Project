@@ -10,9 +10,6 @@
     <ClCompile Include="shader.cpp">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
-    <ClCompile Include="game_scene.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
@@ -71,6 +68,10 @@
     <ClCompile Include="Mesh_2D_Triangle.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Scene_2DWorld.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pointy_head.h">
@@ -87,9 +88,6 @@
     </ClInclude>
     <ClInclude Include="shader.h">
       <Filter>Header Files\Assets\Shaders</Filter>
-    </ClInclude>
-    <ClInclude Include="game_scene.h">
-      <Filter>Header Files\Scenes</Filter>
     </ClInclude>
     <ClInclude Include="GameObject.h">
       <Filter>Header Files\GameObjects</Filter>
@@ -153,6 +151,15 @@
     </ClInclude>
     <ClInclude Include="Configuration.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_2DWorld.h">
+      <Filter>Header Files\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

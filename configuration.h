@@ -8,7 +8,7 @@ struct Configuration
 	int screenHeight = 900;
 	int yUnits = 5;
 	int zUnits = 10000;
-	float fov = 45.f;
+	float fov = 90.f;
 
 	enum class Projection
 	{

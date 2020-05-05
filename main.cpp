@@ -1,11 +1,12 @@
+#include "Configuration.h"
 #include "Engine.h"
-#include "assets.h"
-#include "configuration.h"
+#include "Assets.h"
+#include "Input.h"
 
 // Scene
 #include "Scene.h"
 #include "Scene_Display.h"
-#include "game_scene.h"
+#include "Scene_2DWorld.h"
 
 #include <glfw3.h>
 
@@ -13,6 +14,7 @@
 #include <chrono>
 #include <thread>
 #include <stack>
+#include "main.h"
 
 int main(void)
 {
@@ -20,8 +22,9 @@ int main(void)
 	{
 
 		Configuration* config = new Configuration();
-		Engine* engine        = new Engine("OpenGL Project", config);
-		Assets* assets        = new Assets();
+		Engine* engine = new Engine("OpenGL Project", config);
+		Assets* assets = new Assets();
+		Input* input = new Input(engine->window());
 
 		std::stack<Scene*> scenes;
 		scenes.push(new Scene_Display());
@@ -35,9 +38,9 @@ int main(void)
 			const double previous_frame_duration_s = frame_end_time_s - frame_start_time_s;
 			frame_start_time_s                     = glfwGetTime();
 
-			glfwPollEvents();
-			scenes.top()->Update(previous_frame_duration_s);
-			engine->simulate(previous_frame_duration_s, assets, scenes.top(), config);
+			input->Update(engine->window());
+			scenes.top()->Update(previous_frame_duration_s, input);
+			engine->Simulate(previous_frame_duration_s, assets, scenes.top(), config, input);
 
 			const double current_time_s           = glfwGetTime();
 			const double current_frame_duration_s = current_time_s - frame_start_time_s;

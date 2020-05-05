@@ -2,22 +2,28 @@
 #include "Cube.h"
 #include "ShaderProgram_Colored3D.h"
 #include "ShaderProgram_Textured3D.h"
-#include "assets.h"
+#include "Assets.h"
+#include "Input.h"
 
 #define GLEW_STATIC
 #include <math.h>
 
 Cube::Cube(const char* _id) : GameObject(_id)
 {
-	m_Position.z = -5.0f;
 }
 
 Cube::~Cube()
 {
 }
 
-void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*)
+void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
 {
+	const float _speed = 1.0f;
+
+	/*if (_input->IsButtonState(Input::Button::A, Input::Button_State::DOWN))
+		m_Position.x -= (float)_deltaTime * _speed;
+	else if (_input->IsButtonState(Input::Button::D, Input::Button_State::DOWN))
+		m_Position.x += (float)_deltaTime * _speed;*/
 }
 
 void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)

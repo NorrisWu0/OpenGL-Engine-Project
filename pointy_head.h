@@ -8,6 +8,6 @@ public:
 	Pointy_Head(const char* id);
 	~Pointy_Head();
 
-	virtual void SimulateAI(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config) override;
-	virtual void Render(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config) override;
+	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;
+	virtual void Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config) override;
 };

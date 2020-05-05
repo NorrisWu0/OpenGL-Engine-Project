@@ -158,12 +158,13 @@
     <ClCompile Include="assets.cpp" />
     <ClCompile Include="Cube.cpp" />
     <ClCompile Include="Floor.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="Mesh_3D_Pentagon.cpp" />
     <ClCompile Include="Mesh_3D_Triangle.cpp" />
     <ClCompile Include="ShaderProgram_Colored2D.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="game_scene.cpp" />
+    <ClCompile Include="Scene_2DWorld.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Mesh_3D_Cube.cpp" />
@@ -186,6 +187,8 @@
     <ClInclude Include="assets.h" />
     <ClInclude Include="Cube.h" />
     <ClInclude Include="Floor.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="main.h" />
     <ClInclude Include="Mesh_3D_Pentagon.h" />
     <ClInclude Include="Mesh_3D_Triangle.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />
@@ -193,7 +196,7 @@
     <ClInclude Include="Engine.h" />
     <ClInclude Include="expectations.h" />
     <ClInclude Include="GameObject.h" />
-    <ClInclude Include="game_scene.h" />
+    <ClInclude Include="Scene_2DWorld.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Mesh_3D_Cube.h" />
     <ClInclude Include="pointy_head.h" />

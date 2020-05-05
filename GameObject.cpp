@@ -4,8 +4,8 @@
 #include "scene.h"
 #include "configuration.h"
 
-GameObject::GameObject(const char* id)
-	: _id(id)
+GameObject::GameObject(const char* _id)
+	: _id(_id)
 {
 }
 GameObject::~GameObject()
@@ -33,7 +33,7 @@ std::vector<GLfloat> GameObject::RGBA(float _r, float _g, float _b, float _a)
 	return _value;
 }
 
-glm::mat4x4 GameObject::Transformation(const Scene*, const Configuration* _config)
+glm::mat4x4 GameObject::Transformation(const Scene* _scene, const Configuration* _config)
 {
 	/// Convert vec4 into mat4 (vec4 * vec4 matrix)
 
@@ -49,7 +49,14 @@ glm::mat4x4 GameObject::Transformation(const Scene*, const Configuration* _confi
 	glm::mat4 _model = _position * _scale * _rotation;
 	
 	// Camera Transform
-	
+	glm::vec3 _cameraPosition = _scene->CameraPosition();
+	glm::vec3 _cameraForward = _scene->CameraForward();
+	glm::vec3 _cameraUp = _scene->CameraUp();
+	__pragma(warning(push));
+	__pragma(warning(disable:4127));
+	glm::mat4 _camera = glm::lookAt(_cameraPosition, _cameraPosition + _cameraForward, _cameraUp);
+	__pragma(warning(pop));
+
 	// Projection - scale objects on x axis
 	const float _aspectRatio = float(_config->screenWidth) / _config->screenHeight;
 	const float _xUnits = _aspectRatio * _config->yUnits;
@@ -60,7 +67,22 @@ glm::mat4x4 GameObject::Transformation(const Scene*, const Configuration* _confi
 	if (_config->_projection == Configuration::Projection::Orthographic)
 		_projectionScale = glm::ortho(-_xUnits / 2, _xUnits / 2, -_yUnits / 2, _yUnits / 2, 0.1f, float(_config->zUnits));
 	else if (_config->_projection == Configuration::Projection::Perspective)
-		_projectionScale = glm::perspectiveFov(glm::radians(90.f), float(_config->screenWidth), float(_config->screenHeight), 0.1f, float(_config->zUnits));
+		_projectionScale = glm::perspectiveFov(glm::radians(_config->fov), float(_config->screenWidth), float(_config->screenHeight), 0.1f, float(_config->zUnits));
 
-	return _projectionScale * _model;
+	return _projectionScale * _camera * _model;
+}
+
+void GameObject::SetPosition(const glm::vec3 _position)
+{
+	m_Position = _position;
+}
+
+void GameObject::SetRotation(const glm::vec3 _rotation)
+{
+	m_Rotation = _rotation;
+}
+
+void GameObject::SetScale(const glm::vec3 _scale)
+{
+	m_Scale = _scale;
 }

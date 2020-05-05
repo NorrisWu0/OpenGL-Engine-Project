@@ -20,7 +20,7 @@ Pointy_Head::~Pointy_Head()
 
 }
 
-void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Configuration*)
+void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
 {
 
 }

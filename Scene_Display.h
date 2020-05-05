@@ -7,5 +7,5 @@ public:
 	Scene_Display();
 	~Scene_Display();
 
-	virtual void Update(const double _deltaTime) override;
+	virtual void Update(const double _deltaTime, const Input* _input) override;
 };

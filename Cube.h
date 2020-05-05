@@ -7,8 +7,8 @@ public:
 	Cube(const char*);
 	~Cube();
 	
-	virtual void SimulateAI(const double, const Assets*, const Scene*, const Configuration*) override;
-	virtual void Render(const double, const Assets*, const Scene*, const Configuration*) override;
+	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;
+	virtual void Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config) override;
 
 };
 

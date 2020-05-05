@@ -12,7 +12,7 @@ Scene::~Scene()
 {
 }
 
-std::vector<GameObject*> Scene::get_game_objects() const
+std::vector<GameObject*> Scene::GetGameObjects() const
 {
 	std::vector<GameObject*> game_objects;
 
@@ -24,7 +24,7 @@ std::vector<GameObject*> Scene::get_game_objects() const
 	return game_objects;
 }
 
-GameObject* Scene::get_game_object(const char* id) const
+GameObject* Scene::GetGameObject(const char* id) const
 {
 	if(_game_objects.find(id) == _game_objects.end())
 	{
@@ -38,4 +38,19 @@ GameObject* Scene::get_game_object(const char* id) const
 const char* Scene::id() const
 {
 	return _id;
+}
+
+glm::vec3 Scene::CameraPosition() const
+{
+	return m_CameraPosition;
+}
+
+glm::vec3 Scene::CameraForward() const
+{
+	return m_CameraForward;
+}
+
+glm::vec3 Scene::CameraUp() const
+{
+	return m_CameraUp;
 }

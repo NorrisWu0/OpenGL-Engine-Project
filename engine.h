@@ -1,26 +1,27 @@
 #pragma once
+#include "assets.h"
+#include "Input.h"
 
 class Scene;
 class Input;
 struct Configuration;
 struct GLFWwindow;
 
-#include "assets.h"
 
 class Engine
 {
 public:
-	Engine(const char* game_name, Configuration* config);
+	Engine(const char* _gameName, Configuration* _config);
 	~Engine();
 
-	void simulate(const double _deltaTime, const class Assets* assets, const Scene* scene, const Configuration* config);
+	void Simulate(const double _deltaTime, const class Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input);
 
 	GLFWwindow* window() const;
 
 private:
-	void SimulateAI(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config);
-	void SimulatePhysics(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config);
-	void Render(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config);
+	void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input);
+	void SimulatePhysics(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config);
+	void Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config);
 
 	GLFWwindow* _window = nullptr;
 };

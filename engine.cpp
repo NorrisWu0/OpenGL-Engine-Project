@@ -77,25 +77,21 @@ Engine::Engine(const char* game_name, Configuration* config)
 Engine::~Engine()
 {
 }
-void Engine::simulate(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config)
+void Engine::Simulate(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input)
 {
-	SimulateAI(_deltaTime, assets, scene, config);
-	SimulatePhysics(_deltaTime, assets, scene, config);
-	Render(_deltaTime, assets, scene, config);
+	SimulateAI(_deltaTime, _assets, _scene, _config, _input);
+	SimulatePhysics(_deltaTime, _assets, _scene, _config);
+	Render(_deltaTime, _assets, _scene, _config);
 }
-void Engine::SimulateAI(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config)
+void Engine::SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input)
 {
-	for(auto game_object : scene->get_game_objects())
-	{
-		game_object->SimulateAI(_deltaTime, assets, scene, config);
-	}
+	for(auto game_object : _scene->GetGameObjects())
+		game_object->SimulateAI(_deltaTime, _assets, _scene, _config, _input);
 }
 void Engine::SimulatePhysics(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config)
 {
-	for(auto game_object : scene->get_game_objects())
-	{
+	for(auto game_object : scene->GetGameObjects())
 		game_object->SimulatePhysics(_deltaTime, assets, scene, config);
-	}
 }
 void Engine::Render(const double _deltaTime, const Assets* assets, const Scene* scene, const Configuration* config)
 {
@@ -107,7 +103,7 @@ void Engine::Render(const double _deltaTime, const Assets* assets, const Scene* 
 	};
 	const auto render_gameobjects = [this, assets, config, scene, _deltaTime]()
 	{
-		for(auto game_object : scene->get_game_objects())
+		for(auto game_object : scene->GetGameObjects())
 		{
 			game_object->Render(_deltaTime, assets, scene, config);
 		}
