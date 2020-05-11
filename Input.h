@@ -19,6 +19,8 @@ public:
 		A,
 		D,
 
+		LSHIFT,
+
 		UP,
 		DOWN,
 		LEFT,
@@ -26,7 +28,17 @@ public:
 
 		E,
 		Q,
-		T
+		T,
+
+		K1,
+		K2,
+		K3,
+		K4,
+		K5,
+		K6,
+		K7,
+		K8,
+		K9
 
 	};
 

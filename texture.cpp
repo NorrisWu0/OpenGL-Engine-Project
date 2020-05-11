@@ -8,7 +8,7 @@
 Texture::Texture(const char* id, const char* file_path)
 	: Asset(id)
 {
-	stbi_set_flip_vertically_on_load(true);
+	stbi_set_flip_vertically_on_load(false);
 	_data = stbi_load(file_path, &_width, &_height, &_components, STBI_rgb);
 }
 

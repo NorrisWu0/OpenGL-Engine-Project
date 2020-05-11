@@ -31,8 +31,11 @@ public:
 	glm::mat4x4 Transformation(const Scene* _scene, const Configuration* _config);
 
 	void SetPosition(const glm::vec3 _position);
+	glm::vec3 GetPosition();
 	void SetRotation(const glm::vec3 _rotation);
+	glm::vec3 GetRotation();
 	void SetScale(const glm::vec3 _scale);
+	glm::vec3 GetScale();
 
 protected:
 	const char* _id;

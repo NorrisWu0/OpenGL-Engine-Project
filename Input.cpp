@@ -30,6 +30,10 @@ Input::Input(GLFWwindow* window)
 			case GLFW_KEY_D:
 				input->SetButtonState(Button::D, Button_State::PRESSED);
 				break;
+
+			case GLFW_KEY_LEFT_SHIFT:
+				input->SetButtonState(Button::LSHIFT, Button_State::PRESSED);
+				break;
 			case GLFW_KEY_UP:
 				input->SetButtonState(Button::UP, Button_State::PRESSED);
 				break;
@@ -50,6 +54,25 @@ Input::Input(GLFWwindow* window)
 				break;
 			case GLFW_KEY_T:
 				input->SetButtonState(Button::T, Button_State::PRESSED);
+				break;
+
+			case GLFW_KEY_1:
+				input->SetButtonState(Button::K1, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_2:
+				input->SetButtonState(Button::K2, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_3:
+				input->SetButtonState(Button::K3, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_4:
+				input->SetButtonState(Button::K4, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_5:
+				input->SetButtonState(Button::K5, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_6:
+				input->SetButtonState(Button::K6, Button_State::PRESSED);
 				break;
 			}
 			break;
@@ -72,6 +95,10 @@ Input::Input(GLFWwindow* window)
 			case GLFW_KEY_D:
 				input->SetButtonState(Button::D, Button_State::RELEASED);
 				break;
+
+			case GLFW_KEY_LEFT_SHIFT:
+				input->SetButtonState(Button::LSHIFT, Button_State::RELEASED);
+				break;
 			case GLFW_KEY_UP:
 				input->SetButtonState(Button::UP, Button_State::RELEASED);
 				break;
@@ -93,6 +120,27 @@ Input::Input(GLFWwindow* window)
 			case GLFW_KEY_T:
 				input->SetButtonState(Button::T, Button_State::RELEASED);
 				break;
+
+			case GLFW_KEY_1:
+				input->SetButtonState(Button::K1, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_2:
+				input->SetButtonState(Button::K2, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_3:
+				input->SetButtonState(Button::K3, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_4:
+				input->SetButtonState(Button::K4, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_5:
+				input->SetButtonState(Button::K5, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_6:
+				input->SetButtonState(Button::K6, Button_State::RELEASED);
+				break;
+
+
 			}
 			break;
 

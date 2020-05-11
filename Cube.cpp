@@ -18,12 +18,6 @@ Cube::~Cube()
 
 void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
 {
-	const float _speed = 1.0f;
-
-	/*if (_input->IsButtonState(Input::Button::A, Input::Button_State::DOWN))
-		m_Position.x -= (float)_deltaTime * _speed;
-	else if (_input->IsButtonState(Input::Button::D, Input::Button_State::DOWN))
-		m_Position.x += (float)_deltaTime * _speed;*/
 }
 
 void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
@@ -31,14 +25,12 @@ void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _
 	static double _totalTime = 0;
 	_totalTime += _deltaTime;
 
-	m_Rotation.x = -(float)_totalTime;
-	m_Rotation.y = -(float)_totalTime / 4;
-
-
+	//m_Rotation.x = -(float)_totalTime / 10;
+	//m_Rotation.y = -(float)_totalTime / 40;
 
 	//const ShaderProgram_Colored3D* _program = (ShaderProgram_Colored3D*)_assets->GetAsset("ShaderProgram.3D.Colored");
 	const ShaderProgram_Textured3D* _program = (ShaderProgram_Textured3D*)_assets->GetAsset("ShaderProgram.3D.Textured");
-	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.MarkedCrate");
+	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.SecureServ");
 
 	const Mesh* _mesh = (Mesh*)_assets->GetAsset("Mesh.Cube");
 	glm::mat4 _trans = Transformation(_scene, _config);

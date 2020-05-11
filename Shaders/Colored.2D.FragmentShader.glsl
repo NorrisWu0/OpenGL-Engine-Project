@@ -1,10 +1,10 @@
 #version 330 core
 
-in vec4 interpolated_color;
+in vec4 interpolatedColor;
 
-out vec4 fragment_color;
+out vec4 fragmentColor;
 
 void main()
 {
-    fragment_color = interpolated_color;
+    fragmentColor = interpolatedColor;
 }

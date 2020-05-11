@@ -30,8 +30,11 @@ protected:
 	std::map<std::string, GameObject*> _game_objects;
 	const char* _id;
 
-	glm::vec3 m_CameraPosition = glm::vec3(0.0f, 0.0f, -3.0f);
-	glm::vec3 m_CameraForward = glm::vec3(0.0f, 0.0f, 1.0f);
-	glm::vec3 m_CameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
+	//glm::vec3 m_CameraPosition = glm::vec3(0.0f, 0.0f, -3.0f);
+	//glm::vec3 m_CameraForward = glm::vec3(0.0f, 0.0f, 1.0f);
+	//glm::vec3 m_CameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 
+	glm::vec3 m_CameraPosition = glm::vec3(0.0f, 0.0f, 3.0f);
+	glm::vec3 m_CameraForward = glm::vec3(0.0f, 0.0f, -1.0f);
+	glm::vec3 m_CameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 };
