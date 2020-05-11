@@ -99,6 +99,9 @@
     <ClCompile Include="Mesh_3D_Icosphere.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
+    <ClCompile Include="Grass.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="assets.h">
@@ -213,6 +216,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh_3D_Icosphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Grass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

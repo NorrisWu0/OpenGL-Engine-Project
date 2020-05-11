@@ -122,6 +122,9 @@ Assets::Assets()
 	Texture* _secureServ = new Texture("Texture.SecureServ", "Assets/SecureServ.png");
 	m_Assets.insert({ _secureServ->id(), _secureServ });
 
+	Texture* _secureServ2 = new Texture("Texture.SecureServ2", "Assets/SecureServ2.png");
+	m_Assets.insert({ _secureServ2->id(), _secureServ2 });
+
 	Texture* _allSeeingEye = new Texture("Texture.AllSeeingEye", "Assets/AllSeeingEye.png");
 	m_Assets.insert({ _allSeeingEye->id(), _allSeeingEye });
 
@@ -130,6 +133,9 @@ Assets::Assets()
 	
 	Texture* _markedCrate = new Texture("Texture.MarkedCrate", "Assets/Texture.Crate_With_Sides_Marked.jpg");
 	m_Assets.insert({ _markedCrate->id(), _markedCrate });
+
+	Texture* _mcGrass = new Texture("Texture.MCGrass", "Assets/MC.Grass.png");
+	m_Assets.insert({ _mcGrass->id(), _mcGrass });
 	
 	Texture* _wall = new Texture("Texture.Wall", "Assets/Texture.Wall.jpg");
 	m_Assets.insert({ _wall->id(), _wall });

@@ -12,7 +12,7 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	auto _v7 = {0.5f, -0.5f, -0.5f};
 	auto _v8 = {0.5f, 0.5f, -0.5f};
 
-	auto _width = 1.0f / 1.0f;
+	auto _width = 1.0f / 6.0f;
 	for (int _faceIndex = 0; _faceIndex < 6; ++_faceIndex)
 	{
 		auto tl = { _faceIndex * _width, 0.0f };

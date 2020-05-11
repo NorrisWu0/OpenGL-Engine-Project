@@ -1,9 +1,7 @@
 #pragma once
 #include "Cube.h"
-#include "ShaderProgram_Colored3D.h"
 #include "ShaderProgram_Textured3D.h"
 #include "Assets.h"
-#include "Input.h"
 
 #define GLEW_STATIC
 #include <math.h>
@@ -25,12 +23,8 @@ void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _
 	static double _totalTime = 0;
 	_totalTime += _deltaTime;
 
-	//m_Rotation.x = -(float)_totalTime / 10;
-	//m_Rotation.y = -(float)_totalTime / 40;
-
-	//const ShaderProgram_Colored3D* _program = (ShaderProgram_Colored3D*)_assets->GetAsset("ShaderProgram.3D.Colored");
 	const ShaderProgram_Textured3D* _program = (ShaderProgram_Textured3D*)_assets->GetAsset("ShaderProgram.3D.Textured");
-	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.SecureServ");
+	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.SecureServ2");
 
 	const Mesh* _mesh = (Mesh*)_assets->GetAsset("Mesh.Cube");
 	glm::mat4 _trans = Transformation(_scene, _config);
