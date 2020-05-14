@@ -5,7 +5,7 @@
 #include "GameObject.h"
 #include "expectations.h"
 #include "ShaderProgram.h"
-#include "mesh.h"
+#include "Mesh.h"
 #include "configuration.h"
 #include "Scene.h"
 #include "assets.h"

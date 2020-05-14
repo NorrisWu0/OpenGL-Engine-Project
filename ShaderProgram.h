@@ -12,7 +12,7 @@ class Shader;
 class ShaderProgram : public Asset
 {
 public:
-	ShaderProgram(const char* id, const Shader* vertex_shader, const Shader* fragment_shader);
+	ShaderProgram(const char* _id, const Shader* _vertexShader, const Shader* _fragmentShader);
 	~ShaderProgram();
 
 	const GLuint GetProgram() const;

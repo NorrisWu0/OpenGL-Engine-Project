@@ -5,7 +5,7 @@
 class Bunker :	public GameObject
 {
 public:
-	Bunker(const char*);
+	Bunker(const char* _id);
 	~Bunker();
 
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;

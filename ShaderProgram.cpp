@@ -3,12 +3,12 @@
 
 #include <stdexcept>
 
-ShaderProgram::ShaderProgram(const char* id, const Shader* vertex_shader, const Shader* fragment_shader)
-	: Asset(id)
+ShaderProgram::ShaderProgram(const char* _id, const Shader* _vertexShader, const Shader* _fragmentShader)
+	: Asset(_id)
 {
 	m_Program = glCreateProgram();
-	glAttachShader(m_Program, vertex_shader->data());
-	glAttachShader(m_Program, fragment_shader->data());
+	glAttachShader(m_Program, _vertexShader->data());
+	glAttachShader(m_Program, _fragmentShader->data());
 	glLinkProgram(m_Program);
 
 	GLint shader_program_linking_result;

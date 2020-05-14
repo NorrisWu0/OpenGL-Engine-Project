@@ -5,7 +5,7 @@
 class Texture : public Asset
 {
 public:
-	Texture(const char* id, const char* file_path);
+	Texture(const char* _id, const char* _filePath);
 	~Texture();
 
 	const unsigned char* data() const;

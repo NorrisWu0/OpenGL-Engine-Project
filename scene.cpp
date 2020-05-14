@@ -3,8 +3,8 @@
 #include "Scene.h"
 #include "GameObject.h"
 
-Scene::Scene(const char* id)
-	: _id(id)
+Scene::Scene(const char* ID)
+	: m_ID(ID)
 {
 }
 
@@ -16,7 +16,7 @@ std::vector<GameObject*> Scene::GetGameObjects() const
 {
 	std::vector<GameObject*> game_objects;
 
-	for(auto key_value : _game_objects)
+	for(auto key_value : m_GameObjects)
 	{
 		game_objects.push_back(key_value.second);
 	}
@@ -24,20 +24,20 @@ std::vector<GameObject*> Scene::GetGameObjects() const
 	return game_objects;
 }
 
-GameObject* Scene::GetGameObject(const char* id) const
+GameObject* Scene::GetGameObject(const char* ID) const
 {
-	if(_game_objects.find(id) == _game_objects.end())
+	if(m_GameObjects.find(ID) == m_GameObjects.end())
 	{
-		std::cout << "Attempted to find a game object that does not exist. ID: " << id << std::endl;
+		std::cout << "Attempted to find a game object that does not exist. ID: " << ID << std::endl;
 		exit(1);
 	}
 
-	return _game_objects.find(id)->second;
+	return m_GameObjects.find(ID)->second;
 }
 
-const char* Scene::id() const
+const char* Scene::ID() const
 {
-	return _id;
+	return m_ID;
 }
 
 glm::vec3 Scene::CameraPosition() const

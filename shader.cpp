@@ -1,15 +1,15 @@
  #pragma once
 
-#include "shader.h"
-#include "expectations.h"
+#include "Shader.h"
+#include "Expectations.h"
 
 #include <fstream>
 
-Shader::Shader(const char* id, const char* file_path, const Type type)
-	: Asset(id)
+Shader::Shader(const char* _id, const char* _filePath, const Type type)
+	: Asset(_id)
 {
-	std::ifstream file(file_path);
-	expect(file.is_open(), (std::string("Failed to open file. File: ") + file_path).c_str());
+	std::ifstream file(_filePath);
+	expect(file.is_open(), (std::string("Failed to open file. File: ") + _filePath).c_str());
 	std::string source       = std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 	const char* source_c_str = source.c_str();
 

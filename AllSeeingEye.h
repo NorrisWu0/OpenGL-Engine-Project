@@ -4,7 +4,7 @@
 class AllSeeingEye : public GameObject
 {
 public:
-	AllSeeingEye(const char*);
+	AllSeeingEye(const char* _id);
 	~AllSeeingEye();
 
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;

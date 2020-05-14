@@ -10,7 +10,7 @@
 class Mesh : public Asset
 {
 public:
-	Mesh(const char* id);
+	Mesh(const char* _id);
 	~Mesh();
 
 	const std::vector<GLfloat> verticies()           const;

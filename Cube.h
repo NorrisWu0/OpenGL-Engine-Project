@@ -4,7 +4,7 @@
 class Cube : public GameObject
 {
 public:
-	Cube(const char*);
+	Cube(const char* _id);
 	~Cube();
 	
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;

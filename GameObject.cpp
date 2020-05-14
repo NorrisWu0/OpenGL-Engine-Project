@@ -5,16 +5,16 @@
 #include "configuration.h"
 
 GameObject::GameObject(const char* _id)
-	: _id(_id)
+	: m_ID(_id)
 {
 }
 GameObject::~GameObject()
 {
 }
 
-const char* GameObject::id() const
+const char* GameObject::ID() const
 {
-	return _id;
+	return m_ID;
 }
 
 void GameObject::SimulatePhysics(const double, const Assets*, const Scene*, const Configuration*)

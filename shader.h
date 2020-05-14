@@ -5,7 +5,7 @@
 #define GLEW_STATIC
 #include <glew.h>
 
-#include "asset.h"
+#include "Asset.h"
 
 class Shader : public Asset
 {
@@ -16,7 +16,7 @@ public:
 		Fragment
 	};
 
-	Shader(const char* id, const char* file_path, const Type type);
+	Shader(const char* _id, const char* _filePath, const Type type);
 	~Shader();
 
 	const GLuint data() const;

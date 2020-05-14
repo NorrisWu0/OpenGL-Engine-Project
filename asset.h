@@ -5,11 +5,11 @@
 class Asset
 {
 public:
-	Asset(const char* id);
+	Asset(const char* _id);
 	~Asset();
 
-	const char* id() const;
+	const char* ID() const;
 
 private:
-	const char* _id;
+	const char* m_ID;
 };

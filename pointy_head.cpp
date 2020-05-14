@@ -8,8 +8,8 @@
 #include <vector>
 #include <math.h>
 
-Pointy_Head::Pointy_Head(const char* id)
-	: GameObject(id)
+Pointy_Head::Pointy_Head(const char* _id)
+	: GameObject(_id)
 {
 }
 

@@ -1,15 +1,15 @@
 #include "asset.h"
 
 
-Asset::Asset(const char* id)
-	: _id(id)
+Asset::Asset(const char* _id)
+	: m_ID(_id)
 {
 }
 Asset::~Asset()
 {
 }
 
-const char* Asset::id() const
+const char* Asset::ID() const
 {
-	return _id;
+	return m_ID;
 }

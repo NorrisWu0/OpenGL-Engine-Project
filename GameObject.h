@@ -19,10 +19,10 @@ class Scene;
 class GameObject
 {
 public:
-	GameObject(const char* _id);
+	GameObject(const char* m_ID);
 	~GameObject();
 
-	const char* id() const;
+	const char* ID() const;
 
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) = 0;
 	virtual void SimulatePhysics(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config);
@@ -38,7 +38,7 @@ public:
 	glm::vec3 GetScale();
 
 protected:
-	const char* _id;
+	const char* m_ID;
 
 	double totalTime = 0;
 

@@ -4,7 +4,7 @@ class SecureServ :
 	public GameObject
 {
 public:
-	SecureServ(const char* id);
+	SecureServ(const char* _id);
 	~SecureServ();
 
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) override;

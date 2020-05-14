@@ -1,9 +1,9 @@
 #pragma once
 
-#include "mesh.h"
+#include "Mesh.h"
 
-Mesh::Mesh(const char* id)
-	: Asset(id)
+Mesh::Mesh(const char* _id)
+	: Asset(_id)
 {
 }
 Mesh::~Mesh()

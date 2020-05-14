@@ -23,12 +23,12 @@ Scene_Display::Scene_Display() : Scene("Game")
 {
 	m_CameraPosition = { 0, 0, 0 };
 
-	_game_objects[_secureServ->id()] = _secureServ;
-	_game_objects[_ase->id()] = _ase;
-	_game_objects[_ph->id()] = _ph;
-	_game_objects[_cube->id()] = _cube;
-	_game_objects[_grass->id()] = _grass;
-	_game_objects[_pyramid->id()] = _pyramid;
+	m_GameObjects[_secureServ->ID()] = _secureServ;
+	m_GameObjects[_ase->ID()] = _ase;
+	m_GameObjects[_ph->ID()] = _ph;
+	m_GameObjects[_cube->ID()] = _cube;
+	m_GameObjects[_grass->ID()] = _grass;
+	m_GameObjects[_pyramid->ID()] = _pyramid;
 
 	_secureServ->SetPosition({0.0f, 0.0f, -3.0f});
 	_ase->SetPosition({8.0f, 0.0f, -3.0f});
@@ -52,8 +52,8 @@ Scene_Display::~Scene_Display()
 void Scene_Display::Update(const double _deltaTime, const Input* _input)
 {
 	float _moveSpeed = 4.0f;
-	
-	#pragma region MyRegion
+
+	#pragma region Camera Movement
 	if (_input->IsButtonState(Input::Button::W, Input::Button_State::DOWN))
 		m_CameraPosition += m_CameraForward * (float)_deltaTime * _moveSpeed;
 	else if (_input->IsButtonState(Input::Button::S, Input::Button_State::DOWN))
@@ -69,15 +69,29 @@ void Scene_Display::Update(const double _deltaTime, const Input* _input)
 	else if (_input->IsButtonState(Input::Button::E, Input::Button_State::DOWN))
 		m_CameraPosition -= m_CameraUp * (float)_deltaTime * _moveSpeed;
 
-	if (_input->IsButtonState(Input::Button::LSHIFT, Input::Button_State::DOWN))
-		_moveSpeed = 8.0f;
-	else
-		_moveSpeed = 4.0f;
 	#pragma endregion
 	
+	#pragma region Camera Rotation
+	const double _mouseMovementX = _input->CurrentCursorPosition().first - _input->PreviousCursorPosition().first;
+	const double _mouseMovementY = _input->CurrentCursorPosition().second - _input->PreviousCursorPosition().second;
+
+	m_CameraYaw += (float)_mouseMovementX * m_RotationSensitivity;
+	m_CameraPitch -= (float)_mouseMovementY * m_RotationSensitivity;
+
+	if (m_CameraPitch > 89.0f) m_CameraPitch = 89.0f;
+	if (m_CameraPitch < -89.0f) m_CameraPitch = -89.0f;
+
+	glm::vec3 _camDirection;
+
+	_camDirection.x = cos(glm::radians(m_CameraYaw)) * cos(glm::radians(m_CameraPitch));
+	_camDirection.y = sin(glm::radians(m_CameraPitch));
+	_camDirection.z = sin(glm::radians(m_CameraYaw)) * cos(glm::radians(m_CameraPitch));
+	m_CameraForward = glm::normalize(_camDirection);
+	#pragma endregion
+
+	#pragma region Camera Slot
 	glm::vec3 _offset = { 0.0f, 0.0f, 3.0f };
 
-	#pragma region Camera Location
 	if (_input->IsButtonState(Input::Button::K1, Input::Button_State::DOWN))
 		m_CameraPosition = _secureServ->GetPosition() + _offset;
 
@@ -99,5 +113,6 @@ void Scene_Display::Update(const double _deltaTime, const Input* _input)
 	#pragma endregion
 
 	
-	//std::cout << "Camera Position - X:" << m_CameraPosition.x << "  Y:" << m_CameraPosition.y << "  Z:" << m_CameraPosition.z << std::endl;
+
+	std::cout << "Camera Position - X:" << m_CameraPosition.x << "  Y:" << m_CameraPosition.y << "  Z:" << m_CameraPosition.z << std::endl;
 }

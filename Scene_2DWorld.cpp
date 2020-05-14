@@ -7,13 +7,13 @@ Scene_2DWorld::Scene_2DWorld()
 	: Scene("Game")
 {
 	Pointy_Head* pointy_head = new Pointy_Head("GameObject.Pointy_Head");
-	_game_objects[pointy_head->id()] = pointy_head;
+	m_GameObjects[pointy_head->ID()] = pointy_head;
 
 	Floor* _floor = new Floor("GameObject.Floor");
-	_game_objects[_floor->id()] = _floor;
+	m_GameObjects[_floor->ID()] = _floor;
 
 	Bunker* _bunker = new Bunker("GameObject.Bunker");
-	_game_objects[_bunker->id()] = _bunker;
+	m_GameObjects[_bunker->ID()] = _bunker;
 }
 
 Scene_2DWorld::~Scene_2DWorld()

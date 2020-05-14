@@ -13,32 +13,21 @@ public:
 	enum class Button
 	{
 		QUIT,
-
-		W,
-		S,
-		A,
-		D,
-
 		LSHIFT,
 
-		UP,
-		DOWN,
-		LEFT,
-		RIGHT,
+		W, S, A, D,
+		E, Q, T,
 
-		E,
-		Q,
-		T,
+		NumPad8,
+		NumPad2,
+		NumPad4,
+		NumPad6,
 
-		K1,
-		K2,
-		K3,
-		K4,
-		K5,
-		K6,
-		K7,
-		K8,
-		K9
+		K1, K2, K3, K4, K5, 
+		K6, K7, K8, K9, K0,
+
+		UP, DOWN,
+		LEFT, RIGHT,
 
 	};
 
@@ -55,6 +44,17 @@ public:
 	void SetButtonState(Button type, Button_State state);
 	bool IsButtonState(Button type, Button_State state) const;
 
+	void SetCursorPosition(double _x, double _y);
+	std::pair<double, double> CurrentCursorPosition() const;
+	std::pair<double, double> PreviousCursorPosition() const;
+	
 private:
 	std::map<Button, Button_State> m_ButtonState;
+
+	double m_CurrentCursorX;
+	double m_CurrentCursorY;
+
+	double m_PreviousCursorX;
+	double m_PreviousCursorY;
+
 };

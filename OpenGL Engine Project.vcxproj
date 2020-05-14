@@ -168,6 +168,7 @@
     <ClCompile Include="Mesh_3D_Sphere.cpp" />
     <ClCompile Include="Mesh_3D_Tetrahedron.cpp" />
     <ClCompile Include="Mesh_3D_Triangle.cpp" />
+    <ClCompile Include="Mesh_File_OBJ.cpp" />
     <ClCompile Include="Pyramid.cpp" />
     <ClCompile Include="SecureServ.cpp" />
     <ClCompile Include="ShaderProgram_Colored2D.cpp" />
@@ -185,7 +186,7 @@
     <ClCompile Include="ShaderProgram_Colored3D.cpp" />
     <ClCompile Include="Mesh_2D_Square.cpp" />
     <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="shader.cpp" />
+    <ClCompile Include="Shader.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="Mesh_2D_Triangle.cpp" />
     <ClCompile Include="ShaderProgram_Textured2D.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="Mesh_3D_Triangle.h" />
     <ClInclude Include="Pyramid.h" />
     <ClInclude Include="SecureServ.h" />
+    <ClInclude Include="Mesh_File_OBJ.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />
     <ClInclude Include="Configuration.h" />
     <ClInclude Include="Engine.h" />
@@ -226,7 +228,7 @@
     <ClInclude Include="ShaderProgram_Colored3D.h" />
     <ClInclude Include="Mesh_2D_Square.h" />
     <ClInclude Include="Scene.h" />
-    <ClInclude Include="shader.h" />
+    <ClInclude Include="Shader.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="Mesh_2D_Triangle.h" />
     <ClInclude Include="ShaderProgram_Textured2D.h" />

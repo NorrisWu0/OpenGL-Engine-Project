@@ -4,26 +4,10 @@
     <ClCompile Include="asset.cpp" />
     <ClCompile Include="assets.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pointy_head.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="shader.cpp">
-      <Filter>Source Files\Assets\Shaders</Filter>
-    </ClCompile>
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="Scene.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="Bunker.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Floor.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene_Display.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="ShaderProgram.cpp">
@@ -37,9 +21,6 @@
     </ClCompile>
     <ClCompile Include="ShaderProgram_Colored2D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="Cube.cpp">
-      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="ShaderProgram_Textured3D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
@@ -69,8 +50,27 @@
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Engine.cpp" />
+    <ClCompile Include="Scene_Display.cpp">
+      <Filter>Source Files\Scenes\Scene_Display</Filter>
+    </ClCompile>
     <ClCompile Include="Scene_2DWorld.cpp">
-      <Filter>Source Files\Scenes</Filter>
+      <Filter>Source Files\Scenes\Scene_2DWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Source Files\Scenes\Scene_Display</Filter>
+    </ClCompile>
+    <ClCompile Include="Bunker.cpp">
+      <Filter>Source Files\Scenes\Scene_2DWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="Floor.cpp">
+      <Filter>Source Files\Scenes\Scene_2DWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="pointy_head.cpp">
+      <Filter>Source Files\Scenes\Scene_2DWorld</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_File_OBJ.cpp">
+      <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
     <ClCompile Include="AllSeeingEye.cpp">
       <Filter>Source Files\GameObjects</Filter>
@@ -101,6 +101,9 @@
     </ClCompile>
     <ClCompile Include="Grass.cpp">
       <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,9 +142,6 @@
     </ClInclude>
     <ClInclude Include="ShaderProgram_Textured3D.h">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="shader.h">
-      <Filter>Source Files\Assets\Shaders</Filter>
     </ClInclude>
     <ClInclude Include="Texture.h">
       <Filter>Source Files\Assets\Textures</Filter>
@@ -221,6 +221,10 @@
     <ClInclude Include="Grass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mesh_File_OBJ.h" />
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -252,6 +256,12 @@
     </Filter>
     <Filter Include="Source Files\Assets\Textures">
       <UniqueIdentifier>{e348cf36-464f-4318-b597-a2ecdb1c4f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Scene_Display">
+      <UniqueIdentifier>{ca1178bc-c0da-4546-ac79-6d007c5ec848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Scenes\Scene_2DWorld">
+      <UniqueIdentifier>{0d31d609-1061-4be0-9799-3c611a3981a6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

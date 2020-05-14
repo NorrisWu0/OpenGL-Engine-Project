@@ -1,15 +1,15 @@
 #pragma once
 
-#include "texture.h"
+#include "Texture.h"
 
 #define STB_IMAGE_IMPLEMENTATION
 #include <stb_image.h>
 
-Texture::Texture(const char* id, const char* file_path)
-	: Asset(id)
+Texture::Texture(const char* _id, const char* _filePath)
+	: Asset(_id)
 {
 	stbi_set_flip_vertically_on_load(false);
-	_data = stbi_load(file_path, &_width, &_height, &_components, STBI_rgb);
+	_data = stbi_load(_filePath, &_width, &_height, &_components, STBI_rgb);
 }
 
 Texture::~Texture()
