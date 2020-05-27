@@ -73,22 +73,22 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
