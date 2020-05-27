@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="asset.cpp" />
-    <ClCompile Include="assets.cpp" />
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="GameObject.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
@@ -105,17 +102,11 @@
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
+    <ClCompile Include="Asset.cpp" />
+    <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="assets.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="asset.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="expectations.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Engine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -223,6 +214,15 @@
     </ClInclude>
     <ClInclude Include="Mesh_File_OBJ.h" />
     <ClInclude Include="Shader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Expectations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

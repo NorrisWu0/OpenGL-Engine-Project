@@ -1,13 +1,5 @@
 #pragma once
-
 #include "Floor.h"
-#include "ShaderProgram_Colored2D.h"
-#include "assets.h"
-
-#define GLEW_STATIC
-#include <glew.h>
-#include <vector>
-#include <math.h>
 
 
 Floor::Floor(const char* _id) : GameObject(_id)
@@ -16,13 +8,9 @@ Floor::Floor(const char* _id) : GameObject(_id)
 	m_Scale = glm::vec3(10, 1.25, 1);
 }
 
-Floor::~Floor()
-{
-}
+Floor::~Floor() {}
 
-void Floor::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-}
+void Floor::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void Floor::Render(const double, const Assets* m_Assets, const Scene* _scene, const Configuration* _config)
 {

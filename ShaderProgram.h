@@ -1,18 +1,18 @@
 #pragma once
-
+#include <glew.h>
+#include <stdexcept>
 #include <string>
 
-#define GLEW_STATIC
-#include <glew.h>
-
-#include "asset.h"
+#include "Asset.h"
+#include "Shader.h"
 
 class Shader;
+
 
 class ShaderProgram : public Asset
 {
 public:
-	ShaderProgram(const char* _id, const Shader* _vertexShader, const Shader* _fragmentShader);
+	ShaderProgram(const char* _id, const Shader* _vertex, const Shader* _fragment);
 	~ShaderProgram();
 
 	const GLuint GetProgram() const;

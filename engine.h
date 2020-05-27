@@ -1,5 +1,17 @@
 #pragma once
-#include "assets.h"
+#include <glew.h>
+#include <glfw3.h>
+#include <algorithm>
+#include <iostream>
+
+#include "Expectations.h"
+#include "Configuration.h"
+#include "ShaderProgram.h"
+#include "Assets.h"
+#include "Mesh.h"
+#include "Texture.h"
+#include "Scene.h"
+#include "GameObject.h"
 #include "Input.h"
 
 class Scene;

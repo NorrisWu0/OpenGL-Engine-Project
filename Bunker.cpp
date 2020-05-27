@@ -1,12 +1,6 @@
 #pragma once
 #include "Bunker.h"
-#include "ShaderProgram_Colored2D.h"
-#include "assets.h"
 
-#define GLEW_STATIC
-#include <glew.h>
-#include <vector>
-#include <math.h>
 
 Bunker::Bunker(const char* _id)	: GameObject(_id)
 {
@@ -14,13 +8,9 @@ Bunker::Bunker(const char* _id)	: GameObject(_id)
 	m_Scale = glm::vec3(1.5, 1.5, 1);
 }
 
-Bunker::~Bunker()
-{
-}
+Bunker::~Bunker() {}
 
-void Bunker::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-}
+void Bunker::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void Bunker::Render(const double, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {
@@ -47,5 +37,4 @@ void Bunker::Render(const double, const Assets* _assets, const Scene* _scene, co
 	glm::mat4 _trans = Transformation(_scene, _config);
 
 	_program->Render(_config, _mesh, &_colors, &_trans);
-
 }

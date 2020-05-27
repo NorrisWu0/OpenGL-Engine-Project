@@ -1,6 +1,13 @@
 #pragma once
+#include <glew.h>
+#include <vector>
+#include <math.h>
 
 #include "GameObject.h"
+#include "ShaderProgram_Colored2D.h"
+#include "ShaderProgram_Textured2D.h"
+#include "Assets.h"
+
 
 class Pointy_Head : public GameObject
 {

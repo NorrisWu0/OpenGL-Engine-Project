@@ -1,27 +1,12 @@
 #include "pointy_head.h"
-#include "ShaderProgram_Colored2D.h"
-#include "ShaderProgram_Textured2D.h"
-#include "assets.h"
 
-#define GLEW_STATIC
-#include <glew.h>
-#include <vector>
-#include <math.h>
 
 Pointy_Head::Pointy_Head(const char* _id)
-	: GameObject(_id)
-{
-}
+	: GameObject(_id) {}
 
-Pointy_Head::~Pointy_Head()
-{
+Pointy_Head::~Pointy_Head() {}
 
-}
-
-void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-
-}
+void Pointy_Head::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void Pointy_Head::Render(const double, const Assets* assets, const Scene* scene, const Configuration* config)
 {

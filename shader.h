@@ -1,11 +1,11 @@
 #pragma once
-
-#include <string>
-
-#define GLEW_STATIC
 #include <glew.h>
+#include <string>
+#include <fstream>
 
+#include "Expectations.h"
 #include "Asset.h"
+
 
 class Shader : public Asset
 {

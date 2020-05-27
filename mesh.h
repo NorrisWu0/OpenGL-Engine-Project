@@ -1,11 +1,9 @@
 #pragma once
-
-#include "asset.h"
-
+#include <glew.h>
 #include <vector>
 
-#define GLEW_STATIC
-#include <glew.h>
+#include "Asset.h"
+
 
 class Mesh : public Asset
 {

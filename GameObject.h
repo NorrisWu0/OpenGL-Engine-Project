@@ -1,14 +1,10 @@
 #pragma once
-
-#include <string>
-#include <iostream>
-
+#include <glew.h>
 #include <glm/mat4x4.hpp>
 #include <glm/vec3.hpp>
 #include <glm/gtx/transform.hpp>
-
-#define GLEW_STATIC
-#include <glew.h>
+#include <string>
+#include <iostream>
 #include <vector>
 
 class Assets;
@@ -16,10 +12,11 @@ class Input;
 struct Configuration;
 class Scene;
 
+
 class GameObject
 {
 public:
-	GameObject(const char* m_ID);
+	GameObject(const char* _id);
 	~GameObject();
 
 	const char* ID() const;
@@ -40,7 +37,7 @@ public:
 protected:
 	const char* m_ID;
 
-	double totalTime = 0;
+	double m_TotalTime = 0;
 
 	glm::vec3 m_Position = glm::vec3(0.f, 0.f, 0.f);
 	glm::vec3 m_Rotation = glm::vec3(0.f, 0.f, 0.f);

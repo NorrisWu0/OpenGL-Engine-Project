@@ -1,5 +1,10 @@
 #pragma once
+#include <math.h>
+
 #include "GameObject.h"
+#include "ShaderProgram_Textured3D.h"
+#include "Assets.h"
+
 
 class Cube : public GameObject
 {

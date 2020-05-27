@@ -1,51 +1,41 @@
- #pragma once
-
 #include "Shader.h"
-#include "Expectations.h"
-
-#include <fstream>
 
 Shader::Shader(const char* _id, const char* _filePath, const Type type)
 	: Asset(_id)
 {
-	std::ifstream file(_filePath);
-	expect(file.is_open(), (std::string("Failed to open file. File: ") + _filePath).c_str());
-	std::string source       = std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
-	const char* source_c_str = source.c_str();
+	std::ifstream _file(_filePath);
+	expect(_file.is_open(), (std::string("Failed to open file. File: ") + _filePath).c_str());
+	std::string _source = std::string((std::istreambuf_iterator<char>(_file)), std::istreambuf_iterator<char>());
+	const char* _sourceCStr = _source.c_str();
 
-	switch(type)
+	switch (type)
 	{
-	case Type::Vertex:
+		case Type::Vertex:
 		{
 			_data = glCreateShader(GL_VERTEX_SHADER);
 			break;
 		}
-	case Type::Fragment:
+		case Type::Fragment:
 		{
 			_data = glCreateShader(GL_FRAGMENT_SHADER);
 			break;
 		}
-	default:
-		throw std::runtime_error("Unknown shader type provided.");
+		default:
+			throw std::runtime_error("Unknown shader type provided.");
 	}
 
-	glShaderSource(_data, 1, &source_c_str, NULL);
+	glShaderSource(_data, 1, &_sourceCStr, NULL);
 	glCompileShader(_data);
 
-	GLint shader_compile_result;
-	glGetShaderiv(_data, GL_COMPILE_STATUS, &shader_compile_result);
-	if(shader_compile_result == GL_FALSE)
+	GLint _shaderCompileResult;
+	glGetShaderiv(_data, GL_COMPILE_STATUS, &_shaderCompileResult);
+	if (_shaderCompileResult == GL_FALSE)
 	{
-		GLchar info[1024];
-		glGetShaderInfoLog(_data, sizeof(info), NULL, info);
-		throw std::runtime_error(info);
+		GLchar _log[1024];
+		glGetShaderInfoLog(_data, sizeof(_log), NULL, _log);
+		throw std::runtime_error(_log);
 	}
 }
-Shader::~Shader()
-{
-}
 
-const GLuint Shader::data() const
-{
-	return _data;
-}
+Shader::~Shader() {}
+const GLuint Shader::data() const { return _data; }

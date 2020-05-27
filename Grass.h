@@ -1,5 +1,11 @@
 #pragma once
+#include <math.h>
+
 #include "GameObject.h"
+#include "ShaderProgram_Textured3D.h"
+#include "Assets.h"
+#include "Input.h"
+
 
 class Grass : public GameObject
 {

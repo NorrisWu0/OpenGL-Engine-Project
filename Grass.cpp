@@ -1,23 +1,12 @@
 #pragma once
 #include "Grass.h"
-#include "ShaderProgram_Textured3D.h"
-#include "Assets.h"
-#include "Input.h"
 
-#define GLEW_STATIC
-#include <math.h>
 
-Grass::Grass(const char* _id) : GameObject(_id)
-{
-}
+Grass::Grass(const char* _id) : GameObject(_id) {}
 
-Grass::~Grass()
-{
-}
+Grass::~Grass() {}
 
-void Grass::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-}
+void Grass::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void Grass::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {

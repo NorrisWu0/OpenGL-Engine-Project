@@ -1,22 +1,11 @@
 #pragma once
 #include "Cube.h"
-#include "ShaderProgram_Textured3D.h"
-#include "Assets.h"
 
-#define GLEW_STATIC
-#include <math.h>
 
-Cube::Cube(const char* _id) : GameObject(_id)
-{
-}
+Cube::Cube(const char* _id) : GameObject(_id) {}
+Cube::~Cube() {}
 
-Cube::~Cube()
-{
-}
-
-void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-}
+void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {

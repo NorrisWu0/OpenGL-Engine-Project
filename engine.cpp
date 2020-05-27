@@ -1,20 +1,5 @@
-#include <algorithm>
-#include <iostream>
-
 #include "Engine.h"
-#include "GameObject.h"
-#include "expectations.h"
-#include "ShaderProgram.h"
-#include "Mesh.h"
-#include "configuration.h"
-#include "Scene.h"
-#include "assets.h"
-#include "texture.h"
 
-#define GLEW_STATIC
-#include <glew.h>
-
-#include <glfw3.h>
 
 Engine::Engine(const char* game_name, Configuration* config)
 {
