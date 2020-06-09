@@ -1,5 +1,7 @@
 #pragma once
 #include "GameObject.h"
+#include "ShaderProgram_Textured2D.h"
+#include "Assets.h"
 
 class AllSeeingEye : public GameObject
 {

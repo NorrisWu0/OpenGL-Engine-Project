@@ -1,5 +1,17 @@
 #pragma once
+#include <iostream>
+
 #include "Scene.h"
+#include "Input.h"
+
+#include "SecureServ.h"
+#include "AllSeeingEye.h"
+#include "pointy_head.h"
+#include "Cube.h"
+#include "Grass.h"
+#include "Pyramid.h"
+#include "Robot.h"
+
 
 class Scene_Display :	public Scene
 {

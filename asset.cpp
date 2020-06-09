@@ -2,14 +2,8 @@
 
 
 Asset::Asset(const char* _id)
-	: m_ID(_id)
-{
-}
-Asset::~Asset()
-{
-}
+	: m_ID(_id) {}
 
-const char* Asset::ID() const
-{
-	return m_ID;
-}
+Asset::~Asset() {}
+
+const char* Asset::ID() const { return m_ID; }

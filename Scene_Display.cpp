@@ -1,23 +1,13 @@
 #include "Scene_Display.h"
-#include "Input.h"
 
-#include "SecureServ.h"
-#include "AllSeeingEye.h"
-#include "pointy_head.h"
-
-#include "Cube.h"
-#include "Grass.h"
-#include "Pyramid.h"
-
-#include <iostream>
 
 SecureServ* _secureServ = new SecureServ("GameObject.SecureServ");
 AllSeeingEye* _ase = new AllSeeingEye("GameObject.AllSeeingEye");
 Pointy_Head* _ph = new Pointy_Head("GameObject.thisnewthing");
-
 Cube* _cube = new Cube("GameObject.Cube");
 Grass* _grass = new Grass("GameObject.Grass");
 Pyramid* _pyramid = new Pyramid("GameObject.Pyramid");
+Robot* _robot = new Robot("GameObject.Robot");
 
 Scene_Display::Scene_Display() : Scene("Game")
 {
@@ -29,6 +19,7 @@ Scene_Display::Scene_Display() : Scene("Game")
 	m_GameObjects[_cube->ID()] = _cube;
 	m_GameObjects[_grass->ID()] = _grass;
 	m_GameObjects[_pyramid->ID()] = _pyramid;
+	m_GameObjects[_robot->ID()] = _robot;
 
 	_secureServ->SetPosition({0.0f, 0.0f, -3.0f});
 	_ase->SetPosition({8.0f, 0.0f, -3.0f});
@@ -43,6 +34,9 @@ Scene_Display::Scene_Display() : Scene("Game")
 
 	_pyramid->SetPosition({42.0f, 0.0f, -3.0f});
 	_pyramid->SetScale({3.0f, 3.0f, 3.0f});
+
+	_robot->SetPosition({48.0f, 0.0f, -3.0f});
+	_robot->SetScale({1, 1, 1});
 }
 
 Scene_Display::~Scene_Display()
@@ -109,6 +103,9 @@ void Scene_Display::Update(const double _deltaTime, const Input* _input)
 
 	if (_input->IsButtonState(Input::Button::K6, Input::Button_State::DOWN))
 		m_CameraPosition = _pyramid->GetPosition() + _offset;
+
+	if (_input->IsButtonState(Input::Button::K7, Input::Button_State::DOWN))
+		m_CameraPosition = _robot->GetPosition() + _offset;
 
 	#pragma endregion
 

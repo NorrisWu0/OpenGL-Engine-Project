@@ -82,6 +82,8 @@ Assets::Assets()
 	Mesh_3D_Icosphere* _mesh_3D_Icosphere = new Mesh_3D_Icosphere();
 	m_Assets.insert({ _mesh_3D_Icosphere->ID(), _mesh_3D_Icosphere });
 
+	Mesh_File_OBJ* _mesh_robot = new Mesh_File_OBJ("Mesh.Robot", "Assets/Robot.obj");
+	m_Assets.insert({_mesh_robot->ID(), _mesh_robot});
 	#pragma endregion
 
 	#pragma region Textures
@@ -115,6 +117,8 @@ Assets::Assets()
 	Texture* _wall = new Texture("Texture.Wall", "Assets/Texture.Wall.jpg");
 	m_Assets.insert({ _wall->ID(), _wall });
 
+	Texture* _texture_robot = new Texture("Texture.Robot", "Assets/Robot.Diffuse.jpg", true);
+	m_Assets.insert({ _texture_robot->ID(), _texture_robot });
 	#pragma endregion
 
 }

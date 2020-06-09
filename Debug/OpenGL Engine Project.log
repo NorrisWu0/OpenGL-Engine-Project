@@ -1,17 +1,2 @@
-﻿  AllSeeingEye.cpp
-  Assets.cpp
-  Bunker.cpp
-  Cube.cpp
-  Engine.cpp
-  Floor.cpp
-  Grass.cpp
-  Main.cpp
-  Pyramid.cpp
-  Scene_2DWorld.cpp
-  Scene_Display.cpp
-  SecureServ.cpp
-  ShaderProgram_Textured2D.cpp
-  ShaderProgram_Textured3D.cpp
-  pointy_head.cpp
-  Generating Code...
+﻿  Assets.cpp
   OpenGL Engine Project.vcxproj -> C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\OpenGL-Tutorial-Project\Debug\OpenGL Engine Project.exe

@@ -1,11 +1,10 @@
 #pragma once
-
-#include "asset.h"
+#include "Asset.h"
 
 class Texture : public Asset
 {
 public:
-	Texture(const char* _id, const char* _filePath);
+	Texture(const char* _id, const char* _filePath, bool _flipVertical = false);
 	~Texture();
 
 	const unsigned char* data() const;

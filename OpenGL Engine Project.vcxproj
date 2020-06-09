@@ -170,6 +170,7 @@
     <ClCompile Include="Mesh_3D_Triangle.cpp" />
     <ClCompile Include="Mesh_File_OBJ.cpp" />
     <ClCompile Include="Pyramid.cpp" />
+    <ClCompile Include="Robot.cpp" />
     <ClCompile Include="SecureServ.cpp" />
     <ClCompile Include="ShaderProgram_Colored2D.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -210,6 +211,7 @@
     <ClInclude Include="Mesh_3D_Tetrahedron.h" />
     <ClInclude Include="Mesh_3D_Triangle.h" />
     <ClInclude Include="Pyramid.h" />
+    <ClInclude Include="Robot.h" />
     <ClInclude Include="SecureServ.h" />
     <ClInclude Include="Mesh_File_OBJ.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />

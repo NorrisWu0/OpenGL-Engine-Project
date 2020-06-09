@@ -25,6 +25,7 @@
 #include "Mesh_3D_Tetrahedron.h"
 #include "Mesh_3D_Sphere.h"
 #include "Mesh_3D_Icosphere.h"
+#include "Mesh_File_OBJ.h"
 
 class Asset;
 

@@ -1,20 +1,9 @@
-#pragma once
-
 #include "AllSeeingEye.h"
-#include "ShaderProgram_Textured2D.h"
-#include "Assets.h"
 
-AllSeeingEye::AllSeeingEye(const char* _id) : GameObject(_id)
-{
-}
+AllSeeingEye::AllSeeingEye(const char* _id) : GameObject(_id) {}
+AllSeeingEye::~AllSeeingEye() {}
 
-AllSeeingEye::~AllSeeingEye()
-{
-}
-
-void AllSeeingEye::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*)
-{
-}
+void AllSeeingEye::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
 
 void AllSeeingEye::Render(const double, const Assets* _assets, const Scene* _scene, const Configuration* _config)
 {
