@@ -83,7 +83,7 @@ void Engine::Render(const double _deltaTime, const Assets* assets, const Scene* 
 	const auto prepare = [this]()
 	{
 		glfwSwapBuffers(_window);
-		glClearColor(0.01f, 0.01f, 0.01f, 1.0f);
+		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	};
 	const auto render_gameobjects = [this, assets, config, scene, _deltaTime]()

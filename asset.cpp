@@ -6,4 +6,4 @@ Asset::Asset(const char* _id)
 
 Asset::~Asset() {}
 
-const char* Asset::ID() const { return m_ID; }
+const char* Asset::GetID() const { return m_ID; }

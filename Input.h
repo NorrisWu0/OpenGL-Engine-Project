@@ -1,8 +1,10 @@
 #pragma once
-
+#include <glfw3.h>
+#include <iostream>
 #include <map>
 
 struct GLFWwindow;
+
 
 class Input
 {
@@ -16,7 +18,7 @@ public:
 		LSHIFT,
 
 		W, S, A, D,
-		E, Q, T,
+		E, Q, T, V,
 
 		NumPad8,
 		NumPad2,

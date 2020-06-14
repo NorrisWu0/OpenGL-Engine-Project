@@ -1,49 +1,21 @@
 #include "Scene_Display.h"
 
 
-SecureServ* _secureServ = new SecureServ("GameObject.SecureServ");
-AllSeeingEye* _ase = new AllSeeingEye("GameObject.AllSeeingEye");
-Pointy_Head* _ph = new Pointy_Head("GameObject.thisnewthing");
 Cube* _cube = new Cube("GameObject.Cube");
-Grass* _grass = new Grass("GameObject.Grass");
-Pyramid* _pyramid = new Pyramid("GameObject.Pyramid");
-Robot* _robot = new Robot("GameObject.Robot");
 
 Scene_Display::Scene_Display() : Scene("Game")
 {
 	m_CameraPosition = { 0, 0, 0 };
 
-	m_GameObjects[_secureServ->ID()] = _secureServ;
-	m_GameObjects[_ase->ID()] = _ase;
-	m_GameObjects[_ph->ID()] = _ph;
-	m_GameObjects[_cube->ID()] = _cube;
-	m_GameObjects[_grass->ID()] = _grass;
-	m_GameObjects[_pyramid->ID()] = _pyramid;
-	m_GameObjects[_robot->ID()] = _robot;
+	m_GameObjects[_cube->GetID()] = _cube;
 
-	_secureServ->SetPosition({0.0f, 0.0f, -3.0f});
-	_ase->SetPosition({8.0f, 0.0f, -3.0f});
-	_ase->SetScale({2.0f, 2.0f, 1.0f});
-	_ph->SetPosition({16.0f, 0.0f, -3.0f });
-
-	_cube->SetPosition({24.0f, 0.0f, -3.0f});
+	_cube->SetPosition({0.0f, 0.0f, -3.0f});
 	_cube->SetScale({1.5f, 1.5f, 1.5f});
-
-	_grass->SetPosition({32.0f, 0.0f, -3.0f});
-	_grass->SetScale({1.5f, 1.5f, 1.5f});
-
-	_pyramid->SetPosition({42.0f, 0.0f, -3.0f});
-	_pyramid->SetScale({3.0f, 3.0f, 3.0f});
-
-	_robot->SetPosition({48.0f, 0.0f, -3.0f});
-	_robot->SetScale({1, 1, 1});
 }
 
-Scene_Display::~Scene_Display()
-{
-}
+Scene_Display::~Scene_Display() {}
 
-void Scene_Display::Update(const double _deltaTime, const Input* _input)
+void Scene_Display::Update(const double _deltaTime, const Input* _input, const Configuration*)
 {
 	float _moveSpeed = 4.0f;
 
@@ -83,33 +55,18 @@ void Scene_Display::Update(const double _deltaTime, const Input* _input)
 	m_CameraForward = glm::normalize(_camDirection);
 	#pragma endregion
 
-	#pragma region Camera Slot
+	#pragma region Camera Anchors
 	glm::vec3 _offset = { 0.0f, 0.0f, 3.0f };
 
 	if (_input->IsButtonState(Input::Button::K1, Input::Button_State::DOWN))
-		m_CameraPosition = _secureServ->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K2, Input::Button_State::DOWN))
-		m_CameraPosition = _ase->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K3, Input::Button_State::DOWN))
-		m_CameraPosition = _ph->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K4, Input::Button_State::DOWN))
 		m_CameraPosition = _cube->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K5, Input::Button_State::DOWN))
-		m_CameraPosition = _grass->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K6, Input::Button_State::DOWN))
-		m_CameraPosition = _pyramid->GetPosition() + _offset;
-
-	if (_input->IsButtonState(Input::Button::K7, Input::Button_State::DOWN))
-		m_CameraPosition = _robot->GetPosition() + _offset;
 
 	#pragma endregion
 
-	
-
 	std::cout << "Camera Position - X:" << m_CameraPosition.x << "  Y:" << m_CameraPosition.y << "  Z:" << m_CameraPosition.z << std::endl;
+}
+
+void CameraControl()
+{
+
 }

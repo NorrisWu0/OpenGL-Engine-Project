@@ -7,6 +7,8 @@
 #include <iostream>
 #include <vector>
 
+#include "Expectations.h"
+
 class Assets;
 class Input;
 struct Configuration;
@@ -19,13 +21,17 @@ public:
 	GameObject(const char* _id);
 	~GameObject();
 
-	const char* ID() const;
+	const char* GetID() const;
 
 	virtual void SimulateAI(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config, const Input* _input) = 0;
 	virtual void SimulatePhysics(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config);
 	virtual void Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config) = 0;
-
-	glm::mat4x4 Transformation(const Scene* _scene, const Configuration* _config);
+	
+	glm::mat4x4 Translation() const;
+	glm::mat4x4 Rotation() const;
+	glm::mat4x4 Scale() const;
+	glm::mat4x4 Camera (const Scene* _scene, const Configuration* _config) const;
+	glm::mat4x4 Projection (const Scene* _scene, const Configuration* _config) const;
 
 	void SetPosition(const glm::vec3 _position);
 	glm::vec3 GetPosition();

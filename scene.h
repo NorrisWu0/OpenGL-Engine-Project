@@ -1,13 +1,14 @@
 #pragma once
-
+#include <glm/vec3.hpp>
 #include <map>
 #include <string>
 #include <vector>
 
-#include <glm/vec3.hpp>
+#include "GameObject.h"
 
 class GameObject;
 class Input;
+struct Configuration;
 
 class Scene
 {
@@ -15,12 +16,12 @@ public:
 	Scene(const char* _id);
 	~Scene();
 
-	virtual void Update(const double _deltaTime, const Input* _input) = 0;
+	virtual void Update(const double _deltaTime, const Input* _input, const Configuration* _config) = 0;
 
 	GameObject* GetGameObject(const char* _id) const;
 	std::vector<GameObject*> GetGameObjects() const;
 
-	const char* ID() const;
+	const char* GetID() const;
 
 	glm::vec3 CameraPosition() const;
 	glm::vec3 CameraForward() const;

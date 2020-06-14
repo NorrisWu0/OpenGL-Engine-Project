@@ -51,20 +51,11 @@
     <ClCompile Include="Mesh_File_OBJ.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
-    <ClCompile Include="AllSeeingEye.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="Mesh_2D_RightTriangle.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
     <ClCompile Include="ShaderProgram_Textured2D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="SecureServ.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Pyramid.cpp">
-      <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
     <ClCompile Include="Mesh_2D_Pentagon.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
@@ -78,42 +69,21 @@
     <ClCompile Include="Mesh_3D_Icosphere.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
-    <ClCompile Include="Grass.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
     <ClCompile Include="Asset.cpp" />
     <ClCompile Include="Assets.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Bunker.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Floor.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="pointy_head.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene_2DWorld.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="Scene_Display.cpp">
       <Filter>Source Files\Scenes</Filter>
     </ClCompile>
     <ClCompile Include="Cube.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
-    <ClCompile Include="Robot.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Configuration.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Input.h">
@@ -140,28 +110,10 @@
     <ClInclude Include="Texture.h">
       <Filter>Source Files\Assets\Textures</Filter>
     </ClInclude>
-    <ClInclude Include="AllSeeingEye.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Bunker.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Cube.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Floor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="pointy_head.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Pyramid.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="SecureServ.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh.h">
@@ -200,9 +152,6 @@
     <ClInclude Include="Mesh_3D_Triangle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Scene_2DWorld.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Scene.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -210,9 +159,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Mesh_3D_Icosphere.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Grass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Shader.h">
@@ -230,9 +176,7 @@
     <ClInclude Include="Mesh_File_OBJ.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Robot.h">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClInclude>
+    <ClInclude Include="Configuration.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">

@@ -6,7 +6,6 @@
 // Scene
 #include "Scene.h"
 #include "Scene_Display.h"
-#include "Scene_2DWorld.h"
 
 #include <glfw3.h>
 
@@ -39,7 +38,7 @@ int main(void)
 			frame_start_time_s                     = glfwGetTime();
 
 			input->Update(engine->window());
-			scenes.top()->Update(previous_frame_duration_s, input);
+			scenes.top()->Update(previous_frame_duration_s, input, config);
 			engine->Simulate(previous_frame_duration_s, assets, scenes.top(), config, input);
 
 			const double current_time_s           = glfwGetTime();

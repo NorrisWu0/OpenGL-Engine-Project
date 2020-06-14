@@ -1,8 +1,5 @@
 #include "Input.h"
 
-#include <iostream>
-
-#include <glfw3.h>
 
 Input* input;
 
@@ -43,6 +40,9 @@ Input::Input(GLFWwindow* _window)
 				break;
 			case GLFW_KEY_T:
 				input->SetButtonState(Button::T, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_V:
+				input->SetButtonState(Button::V, Button_State::PRESSED);
 				break;
 
 			#pragma endregion
@@ -138,6 +138,9 @@ Input::Input(GLFWwindow* _window)
 			case GLFW_KEY_T:
 				input->SetButtonState(Button::T, Button_State::RELEASED);
 				break;
+			case GLFW_KEY_V:
+				input->SetButtonState(Button::V, Button_State::RELEASED);
+				break;
 
 			#pragma endregion
 
@@ -225,7 +228,7 @@ Input::~Input()
 {
 }
 
-void Input::Update(GLFWwindow* window)
+void Input::Update(GLFWwindow* _window)
 {
 	m_PreviousCursorX = m_CurrentCursorX;
 	m_PreviousCursorY = m_CurrentCursorY;
@@ -238,7 +241,7 @@ void Input::Update(GLFWwindow* window)
 
 	glfwPollEvents();
 
-	if (glfwWindowShouldClose(window))
+	if (glfwWindowShouldClose(_window))
 		input->SetButtonState(Button::QUIT, Button_State::PRESSED);
 }
 
@@ -265,17 +268,6 @@ void Input::SetCursorPosition(double _x, double _y)
 	m_CurrentCursorY = _y;
 }
 
-std::pair<double, double> Input::CurrentCursorPosition() const
-{
-	return {m_CurrentCursorX, m_CurrentCursorY};
-}
-
-std::pair<double, double> Input::PreviousCursorPosition() const
-{
-	return {m_PreviousCursorX, m_PreviousCursorY};
-}
-
-void Input::SetButtonState(Button type, Button_State state)
-{
-	m_ButtonState[type] = state;
-};
+std::pair<double, double> Input::CurrentCursorPosition() const { return {m_CurrentCursorX, m_CurrentCursorY}; }
+std::pair<double, double> Input::PreviousCursorPosition() const { return {m_PreviousCursorX, m_PreviousCursorY}; }
+void Input::SetButtonState(Button type, Button_State state) { m_ButtonState[type] = state; };

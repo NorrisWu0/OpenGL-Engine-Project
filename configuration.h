@@ -16,6 +16,5 @@ struct Configuration
 		Perspective
 	};
 
-	Projection _projection = Projection::Perspective;
-
+	Projection projection = Projection::Perspective;
 };

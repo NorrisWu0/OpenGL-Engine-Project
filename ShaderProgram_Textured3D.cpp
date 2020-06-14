@@ -7,7 +7,7 @@ ShaderProgram_Textured3D::ShaderProgram_Textured3D(const Shader* _vertex, const 
 
 ShaderProgram_Textured3D::~ShaderProgram_Textured3D() {}
 
-void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* _mesh, const Texture* _texture, const glm::mat4* _transformation) const
+void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* _mesh, const Texture* _texture, const glm::mat4 _translation, const glm::mat4 _rotation, const glm::mat4 _scale, const glm::mat4 _camera, const glm::mat4 projection) const
 {
 	glUseProgram(GetProgram());
 	glBindVertexArray(GetVAO());
@@ -21,10 +21,76 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 
 	#pragma region Vertex Position
 	GLint _vertexPosition = glGetAttribLocation(GetProgram(), "vertexPosition");
-	expect(_vertexPosition != -1, "Failed to get vertex position");
+	expect(_vertexPosition != -1, "Failed to get vertex position variable in shader");
 	glEnableVertexAttribArray(_vertexPosition);
 	glVertexAttribPointer(_vertexPosition, 3, GL_FLOAT, GL_FALSE, 0, NULL);
 	#pragma endregion
+
+	#pragma region Normal Buffer Object
+	GLuint _nboIndex;
+	glGenBuffers(1, &_nboIndex);
+	glBindBuffer(GL_ARRAY_BUFFER, _nboIndex);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * _mesh->normals().size(), _mesh->normals().data(), GL_STATIC_DRAW);
+	#pragma endregion
+
+	#pragma region Vertex Normal
+	GLint _vertexNormalValue = glGetAttribLocation(GetProgram(), "vertexNormal");
+	expect(_vertexNormalValue != -1, "Failed to get vertex normal value.");
+	glEnableVertexAttribArray(_vertexNormalValue);
+	glVertexAttribPointer(_vertexNormalValue, 3, GL_FLOAT, GL_FALSE, 0, NULL);
+	#pragma endregion
+
+	#pragma region Translation
+	GLint _translatedValue = glGetUniformLocation(GetProgram(), "translation");
+	expect(_translatedValue != -1, "Failed to find translation variable in shader");
+	glUniformMatrix4fv(_translatedValue, 1, GL_FALSE, &(_translation)[0][0]);
+	#pragma endregion
+
+	#pragma region Rotation
+	GLint _rotationValue = glGetUniformLocation(GetProgram(), "rotation");
+	expect(_rotationValue != -1, "Failed to find rotation variable in shader");
+	glUniformMatrix4fv(_rotationValue, 1, GL_FALSE, &(_rotation)[0][0]);
+	#pragma endregion
+
+	#pragma region Scale
+	GLint _scaleValue = glGetUniformLocation(GetProgram(), "scale");
+	expect(_scaleValue != -1, "Failed to find scale variable in shader");
+	glUniformMatrix4fv(_scaleValue, 1, GL_FALSE, &(_scale)[0][0]);
+	#pragma endregion
+
+	#pragma region Camera
+	GLint _cameraValue = glGetUniformLocation(GetProgram(), "camera");
+	expect(_cameraValue != -1, "Failed to find camera variable in shader");
+	glUniformMatrix4fv(_cameraValue, 1, GL_FALSE, &(_camera)[0][0]);
+	#pragma endregion
+
+	#pragma region Projection
+	GLint _projectionValue = glGetUniformLocation(GetProgram(), "projection");
+	expect(_projectionValue!= -1, "Failed to find projection variable in shader");
+	glUniformMatrix4fv(_projectionValue, 1, GL_FALSE, &(projection)[0][0]);
+	#pragma endregion
+
+	#pragma region Ambient Light
+	GLint _ambientLightValue = glGetUniformLocation(GetProgram(), "ambientLight");
+	expect(_ambientLightValue != -1, "Failed to find ambientLight variable in shader");
+	const glm::vec3 _ambientLightColor( .1f, 0.1f, 0.1f);
+	glUniform3fv(_ambientLightValue, 1, (float*)(&_ambientLightColor));
+	#pragma endregion
+
+	#pragma region Light Position
+	const glm::vec3 _lightPosition(0.0, 1.0, -3.5);
+	GLint _lightPositionValue = glGetUniformLocation(GetProgram(), "lightPosition");
+	expect(_lightPositionValue != -1, "Failed to find light position variable in shader.");
+	glUniform3fv(_lightPositionValue, 1, (float*)(&_lightPosition));
+	#pragma endregion
+
+	#pragma region Light Color
+	const glm::vec3 _lightColor(1.0, 1.0, 1.0);
+	GLint _lightColorValue = glGetUniformLocation(GetProgram(), "lightColor");
+	expect(_lightColorValue != -1, "Failed to find light position value.");
+	glUniform3fv(_lightColorValue, 1, (float*)(&_lightColor));
+	#pragma endregion
+
 
 	#pragma region Texture Buffer Object
 	GLuint _tboIndex;
@@ -40,31 +106,26 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 	glVertexAttribPointer(_textureCoordPosition, 2, GL_FLOAT, GL_FALSE, 0, NULL);
 	#pragma endregion
 
-	#pragma region Transformation
-	GLint _transformLocation = glGetUniformLocation(GetProgram(), "transformation");
-	expect(_transformLocation != -1, "Failed to find mask uniform location.");
-	glUniformMatrix4fv(_transformLocation, 1, GL_FALSE, &(*_transformation)[0][0]);
-	#pragma endregion
-
-	#pragma region Texture Position
-	GLuint _texturePosition;
-	glGenTextures(1, &_texturePosition);
+	#pragma region Texture
+	GLuint _textureValue;
+	glGenTextures(1, &_textureValue);
 
 	glActiveTexture(GL_TEXTURE0 + 0);
-	glBindTexture(GL_TEXTURE_2D, _texturePosition);
+	glBindTexture(GL_TEXTURE_2D, _textureValue);
 
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, _texture->width(), _texture->height(), 0, GL_RGB, GL_UNSIGNED_BYTE, _texture->data());
+	glGenerateMipmap(GL_TEXTURE_2D);
 
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	#pragma endregion
 
-	#pragma region Image Position
-	GLint _imagePosition = glGetUniformLocation(GetProgram(), "image");
-	expect(_imagePosition != -1, "Failed to find image uniform location.");
-	glUniform1i(_imagePosition, 0);
+	#pragma region Image
+	GLint _imageValue = glGetUniformLocation(GetProgram(), "image");
+	expect(_imageValue != -1, "Failed to find image value.");
+	glUniform1i(_imageValue, 0);
 	#pragma endregion
 
 	if (_config->renderWireframe)
@@ -74,5 +135,5 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 
 
 	glDeleteBuffers(1, &_vboIndex);
-	glDeleteTextures(1, &_texturePosition);
+	glDeleteTextures(1, &_textureValue);
 }

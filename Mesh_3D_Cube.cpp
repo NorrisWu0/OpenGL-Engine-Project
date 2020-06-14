@@ -12,6 +12,13 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	auto _v7 = {0.5f, -0.5f, -0.5f};
 	auto _v8 = {0.5f, 0.5f, -0.5f};
 
+	auto _front = { 0.0f, 0.0f, 1.0f };
+	auto _back = { 0.0f, 0.0f, -1.0f };
+	auto _left = { -1.0f, 0.0f, 0.0f };
+	auto _right = { 1.0f, 0.0f, 0.0f };
+	auto _top = { 0.0f, 1.0f, 0.0f };
+	auto _bottom = { 0.0f, -1.0f, 0.0f };
+
 	auto _width = 1.0f / 6.0f;
 	for (int _faceIndex = 0; _faceIndex < 6; ++_faceIndex)
 	{
@@ -35,6 +42,13 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v1);
 	m_Verticies.insert(m_Verticies.end(), _v3);
 	m_Verticies.insert(m_Verticies.end(), _v4);
+
+	m_Normals.insert(m_Normals.end(), _front);
+	m_Normals.insert(m_Normals.end(), _front);
+	m_Normals.insert(m_Normals.end(), _front);
+	m_Normals.insert(m_Normals.end(), _front);
+	m_Normals.insert(m_Normals.end(), _front);
+	m_Normals.insert(m_Normals.end(), _front);
 	#pragma endregion
 
 	#pragma region Right
@@ -44,6 +58,14 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v4);
 	m_Verticies.insert(m_Verticies.end(), _v7);
 	m_Verticies.insert(m_Verticies.end(), _v8);
+
+	m_Normals.insert(m_Normals.end(), _right);
+	m_Normals.insert(m_Normals.end(), _right);
+	m_Normals.insert(m_Normals.end(), _right);
+	m_Normals.insert(m_Normals.end(), _right);
+	m_Normals.insert(m_Normals.end(), _right);
+	m_Normals.insert(m_Normals.end(), _right);
+
 	#pragma endregion
 
 	#pragma region Back
@@ -53,6 +75,14 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v8);
 	m_Verticies.insert(m_Verticies.end(), _v6);
 	m_Verticies.insert(m_Verticies.end(), _v5);
+
+	m_Normals.insert(m_Normals.end(), _back);
+	m_Normals.insert(m_Normals.end(), _back);
+	m_Normals.insert(m_Normals.end(), _back);
+	m_Normals.insert(m_Normals.end(), _back);
+	m_Normals.insert(m_Normals.end(), _back);
+	m_Normals.insert(m_Normals.end(), _back);
+	
 	#pragma endregion
 
 	#pragma region Left
@@ -62,6 +92,14 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v5);
 	m_Verticies.insert(m_Verticies.end(), _v2);
 	m_Verticies.insert(m_Verticies.end(), _v1);
+	
+	m_Normals.insert(m_Normals.end(), _left);
+	m_Normals.insert(m_Normals.end(), _left);
+	m_Normals.insert(m_Normals.end(), _left);
+	m_Normals.insert(m_Normals.end(), _left);
+	m_Normals.insert(m_Normals.end(), _left);
+	m_Normals.insert(m_Normals.end(), _left);
+	
 	#pragma endregion
 
 	#pragma region Top
@@ -71,6 +109,14 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v5);
 	m_Verticies.insert(m_Verticies.end(), _v4);
 	m_Verticies.insert(m_Verticies.end(), _v8);
+
+	m_Normals.insert(m_Normals.end(), _top);
+	m_Normals.insert(m_Normals.end(), _top);
+	m_Normals.insert(m_Normals.end(), _top);
+	m_Normals.insert(m_Normals.end(), _top);
+	m_Normals.insert(m_Normals.end(), _top);
+	m_Normals.insert(m_Normals.end(), _top);
+	
 	#pragma endregion
 
 	#pragma region Bottom
@@ -80,8 +126,16 @@ Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 	m_Verticies.insert(m_Verticies.end(), _v2);
 	m_Verticies.insert(m_Verticies.end(), _v7);
 	m_Verticies.insert(m_Verticies.end(), _v3);
-	#pragma endregion
 	
+	m_Normals.insert(m_Normals.end(), _bottom);
+	m_Normals.insert(m_Normals.end(), _bottom);
+	m_Normals.insert(m_Normals.end(), _bottom);
+	m_Normals.insert(m_Normals.end(), _bottom);
+	m_Normals.insert(m_Normals.end(), _bottom);
+	m_Normals.insert(m_Normals.end(), _bottom);
+	
+	#pragma endregion
+
 }
 
 Mesh_3D_Cube::~Mesh_3D_Cube()

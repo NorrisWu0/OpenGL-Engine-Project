@@ -24,6 +24,14 @@ Mesh_File_OBJ::Mesh_File_OBJ(const char* _id, const char* _filePath) : Mesh(_id)
 			std::istringstream _ss(_line.substr(3));
 			_ss >> _textureCoords.data()[_size].x >> _textureCoords.data()[_size].y;
 		}
+		else if (_line.substr(0, 2) == "vn") //vertex normal
+		{
+			const size_t _size = _normal.size();
+			_normal.resize(_size + 1);
+
+			std::istringstream _ss(_line.substr(3));
+			_ss >> _normal.data()[_size].x >> _normal.data()[_size].y;
+		}
 		else if (_line[0] == 'v') // vertex
 		{
 			const size_t _size = _verticies.size();
@@ -31,16 +39,8 @@ Mesh_File_OBJ::Mesh_File_OBJ(const char* _id, const char* _filePath) : Mesh(_id)
 
 			std::istringstream _ss(_line.substr(3));
 			_ss >> _verticies.data()[_size].x >> _verticies.data()[_size].y >> _verticies.data()[_size].z;
-
 		}
-		//else if (_line.substr(0, 2) == "vn") //vertex normal
-		//{
-		//	const size_t _size = _normal.size();
-		//	_normal.resize(_size + 1);
-
-		//	std::istringstream _ss(_line.substr(3));
-		//	_ss >> _normal.data()[_size].x >> _normal.data()[_size].y;
-		//}
+		
 		else if (_line[0] == 'f')
 		{
 			std::istringstream _ss(_line.substr(2));
