@@ -165,6 +165,7 @@
     <ClCompile Include="Mesh_3D_Quad.cpp" />
     <ClCompile Include="Mesh_3D_Tetrahedron.cpp" />
     <ClCompile Include="Mesh_File_OBJ.cpp" />
+    <ClCompile Include="SignPost.cpp" />
     <ClCompile Include="TestChamber.cpp" />
     <ClCompile Include="ShaderProgram_Colored2D.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -173,7 +174,7 @@
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="Mesh_3D_Cube.cpp" />
     <ClCompile Include="Mesh_2D_Octagon.cpp" />
-    <ClCompile Include="Scene_Display.cpp" />
+    <ClCompile Include="Scene_TestChamber.cpp" />
     <ClCompile Include="Mesh_2D_SemiOctagon.cpp" />
     <ClCompile Include="ShaderProgram_Colored3D.cpp" />
     <ClCompile Include="Mesh_2D_Square.cpp" />
@@ -196,6 +197,7 @@
     <ClInclude Include="Mesh_3D_Quad.h" />
     <ClInclude Include="Mesh_3D_Tetrahedron.h" />
     <ClInclude Include="Mesh_File_OBJ.h" />
+    <ClInclude Include="SignPost.h" />
     <ClInclude Include="TestChamber.h" />
     <ClInclude Include="ShaderProgram_Colored2D.h" />
     <ClInclude Include="Configuration.h" />
@@ -205,7 +207,7 @@
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Mesh_3D_Cube.h" />
     <ClInclude Include="Mesh_2D_Octagon.h" />
-    <ClInclude Include="Scene_Display.h" />
+    <ClInclude Include="Scene_TestChamber.h" />
     <ClInclude Include="Mesh_2D_SemiOctagon.h" />
     <ClInclude Include="ShaderProgram_Colored3D.h" />
     <ClInclude Include="Mesh_2D_Square.h" />

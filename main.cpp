@@ -5,7 +5,7 @@
 
 // Scene
 #include "Scene.h"
-#include "Scene_Display.h"
+#include "Scene_TestChamber.h"
 
 #include <glfw3.h>
 
@@ -25,7 +25,7 @@ int main(void)
 		Input* input = new Input(engine->window());
 
 		std::stack<Scene*> scenes;
-		scenes.push(new Scene_Display());
+		scenes.push(new Scene_TestChamber());
 
 		const double frames_per_second = 60.0;
 		const double frame_time_s      = 1.0 / frames_per_second;

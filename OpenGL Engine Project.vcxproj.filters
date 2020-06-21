@@ -35,9 +35,6 @@
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Scene_Display.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
     <ClCompile Include="Cube.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
@@ -87,6 +84,12 @@
       <Filter>Source Files\Assets\Meshes\3D</Filter>
     </ClCompile>
     <ClCompile Include="TestChamber.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_TestChamber.cpp">
+      <Filter>Source Files\Scenes</Filter>
+    </ClCompile>
+    <ClCompile Include="SignPost.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
   </ItemGroup>
@@ -139,9 +142,6 @@
     <ClInclude Include="Scene.h">
       <Filter>Source Files\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Scene_Display.h">
-      <Filter>Source Files\Scenes</Filter>
-    </ClInclude>
     <ClInclude Include="Shader.h">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClInclude>
@@ -179,6 +179,12 @@
       <Filter>Source Files\Assets\Meshes\3D</Filter>
     </ClInclude>
     <ClInclude Include="TestChamber.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_TestChamber.h">
+      <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="SignPost.h">
       <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
