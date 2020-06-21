@@ -12,7 +12,7 @@ Engine::Engine(const char* game_name, Configuration* config)
 		glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
-		_window = glfwCreateWindow(config->screenWidth, config->screenHeight, game_name, NULL, NULL);
+		_window = glfwCreateWindow(config->ScreenWidth, config->ScreenHeight, game_name, NULL, NULL);
 		expect(_window != nullptr, "Failed to create GLFW window.");
 		glfwMakeContextCurrent(_window);
 	};

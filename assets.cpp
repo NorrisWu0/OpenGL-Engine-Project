@@ -1,5 +1,31 @@
 #include "Assets.h"
 
+#include <glew.h>
+#include <string>
+#include <iostream>
+
+#include "Shader.h"
+#include "Texture.h"
+
+// Shader Programs
+#include "ShaderProgram.h"
+#include "ShaderProgram_Colored2D.h"
+#include "ShaderProgram_Colored3D.h"
+#include "ShaderProgram_Textured2D.h"
+#include "ShaderProgram_Textured3D.h"
+
+// Meshes
+#include "Mesh_2D_RightTriangle.h"
+#include "Mesh_2D_Triangle.h"
+#include "Mesh_2D_Square.h"
+#include "Mesh_2D_Pentagon.h"
+#include "Mesh_2D_Octagon.h"
+#include "Mesh_2D_SemiOctagon.h"
+#include "Mesh_3D_Cube.h"
+#include "Mesh_3D_InvertedCube.h"
+#include "Mesh_3D_Quad.h"
+#include "Mesh_3D_Tetrahedron.h"
+#include "Mesh_File_OBJ.h"
 
 Assets::Assets()
 {
@@ -70,25 +96,25 @@ Assets::Assets()
 	Mesh_2D_SemiOctagon* _mesh_2D_SemiOctagon = new Mesh_2D_SemiOctagon();
 	m_Assets.insert({ _mesh_2D_SemiOctagon->GetID(), _mesh_2D_SemiOctagon });
 
-	Mesh_3D_Cube* _mesh_3D_Cube = new Mesh_3D_Cube();
-	m_Assets.insert({ _mesh_3D_Cube->GetID(), _mesh_3D_Cube });
+	Mesh_3D_SignPost* _mesh_3D_SignPost = new Mesh_3D_SignPost();
+	m_Assets.insert({ _mesh_3D_SignPost->GetID(), _mesh_3D_SignPost });
+
+	Mesh_3D_InvertedCube* _mesh_3D_InvertedCube = new Mesh_3D_InvertedCube();
+	m_Assets.insert({ _mesh_3D_InvertedCube->GetID(), _mesh_3D_InvertedCube });
+	
+	Mesh_3D_Quad* _mesh_3D_Quad = new Mesh_3D_Quad();
+	m_Assets.insert({ _mesh_3D_Quad->GetID(), _mesh_3D_Quad });
 
 	Mesh_3D_Tetrahedron* _mesh_3D_Tetrahedron = new Mesh_3D_Tetrahedron();
 	m_Assets.insert({ _mesh_3D_Tetrahedron->GetID(), _mesh_3D_Tetrahedron });
 	
-	Mesh_3D_Sphere* _mesh_3D_Sphere = new Mesh_3D_Sphere();
-	m_Assets.insert({ _mesh_3D_Sphere->GetID(), _mesh_3D_Sphere });
-
-	Mesh_3D_Icosphere* _mesh_3D_Icosphere = new Mesh_3D_Icosphere();
-	m_Assets.insert({ _mesh_3D_Icosphere->GetID(), _mesh_3D_Icosphere });
-
 	Mesh_File_OBJ* _mesh_robot = new Mesh_File_OBJ("Mesh.Robot", "Assets/Robot.obj");
 	m_Assets.insert({_mesh_robot->GetID(), _mesh_robot});
 	#pragma endregion
 
 	#pragma region Textures
-	Texture* _square = new Texture("Texture.Square", "Assets/Square.png");
-	m_Assets.insert({ _square->GetID(), _square });
+	Texture* _gridBox = new Texture("Texture.GridBox", "Assets/GridBox.png");
+	m_Assets.insert({ _gridBox->GetID(), _gridBox });
 
 	Texture* _rTriangle = new Texture("Texture.RightTriangle", "Assets/RightTriangle.png");
 	m_Assets.insert({ _rTriangle->GetID(), _rTriangle });

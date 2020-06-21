@@ -2,20 +2,25 @@
 #include "Cube.h"
 
 
-Cube::Cube(const char* _id) : GameObject(_id) {}
+Cube::Cube(const char* _id) : GameObject(_id) 
+{
+	SetPosition(glm::vec3((float)(rand() % 20 - 10), (float)(rand() % 20 - 10), (float)(rand() % 20 - 10)));
+}
+
 Cube::~Cube() {}
 
-void Cube::SimulateAI(const double, const Assets*, const Scene*, const Configuration*, const Input*) {}
-
-void Cube::Render(const double _deltaTime, const Assets* _assets, const Scene* _scene, const Configuration* _config)
+void Cube::SimulateAI(const double _deltaTime, const Assets*, const Scene*, const Configuration*, const Input*)
 {
-	m_TotalTime += _deltaTime / 3;
-	m_Rotation.x = (float)m_TotalTime;
+	glm::vec3 _cubeRotation{ (float)_deltaTime / 4 , (float)_deltaTime / 4 , (float)_deltaTime / 4 };
 
-	m_Position.x = sinf((float)m_TotalTime * 2) * 4;
+	m_Rotation += _cubeRotation;
+}
+
+void Cube::Render(const double , const Assets* _assets, const Scene* _scene, const Configuration* _config)
+{
 
 	const ShaderProgram_Textured3D* _program = (ShaderProgram_Textured3D*)_assets->GetAsset("ShaderProgram.3D.Textured");
-	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.SecureServ2");
+	const Texture* _texture = (Texture*)_assets->GetAsset("Texture.GridBox");
 
 	const Mesh* _mesh = (Mesh*)_assets->GetAsset("Mesh.Cube");
 

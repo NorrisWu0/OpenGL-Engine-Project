@@ -45,7 +45,7 @@ void ShaderProgram_Colored2D::Render(const Configuration* _config, const Mesh* _
 	glUniformMatrix4fv(_transformLocation, 1, GL_FALSE, &(*_transformation)[0][0]);
 	#pragma endregion
 
-	if(_config->renderWireframe)
+	if(_config->RenderWireframe)
 		glDrawArrays(GL_LINE_LOOP, 0, GLsizei(_mesh->verticies().size() / 2));
 	else
 		glDrawArrays(GL_TRIANGLES, 0, GLsizei(_mesh->verticies().size() / 2));

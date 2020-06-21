@@ -54,14 +54,14 @@ glm::mat4x4 GameObject::Camera(const Scene* _scene, const Configuration*) const
 
 glm::mat4x4 GameObject::Projection(const Scene*, const Configuration* _config) const
 {
-	const float _aspectRatio = float(_config->screenWidth) / _config->screenHeight;
-	const float _xUnits = _aspectRatio * _config->yUnits;
-	const float _yUnits = float(_config->yUnits);
+	const float _aspectRatio = float(_config->ScreenWidth) / _config->ScreenHeight;
+	const float _xUnits = _aspectRatio * _config->YUnits;
+	const float _yUnits = float(_config->YUnits);
 
-	if (_config->projection == Configuration::Projection::Orthographic)
-		return glm::ortho(-_xUnits / 2, _xUnits / 2, -_yUnits / 2, _yUnits / 2, 0.1f, float(_config->zUnits));
-	else if (_config->projection == Configuration::Projection::Perspective)
-		return glm::perspectiveFov(glm::radians(_config->fov), float(_config->screenWidth), float(_config->screenHeight), 0.1f, float(_config->zUnits));
+	if (_config->Projection == Configuration::ProjectionType::Orthographic)
+		return glm::ortho(-_xUnits / 2, _xUnits / 2, -_yUnits / 2, _yUnits / 2, 0.1f, float(_config->ZUnits));
+	else if (_config->Projection == Configuration::ProjectionType::Perspective)
+		return glm::perspectiveFov(glm::radians(_config->FOV), float(_config->ScreenWidth), float(_config->ScreenHeight), 0.1f, float(_config->ZUnits));
 	else
 		throw new std::exception("Unhandled projection type.");
 }

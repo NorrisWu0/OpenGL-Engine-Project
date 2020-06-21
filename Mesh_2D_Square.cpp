@@ -12,13 +12,22 @@ Mesh_2D_Square::Mesh_2D_Square() : Mesh("Mesh.Square")
 	auto _tc3 = { 1.0f, 1.0f };
 	auto _tc4 = { 1.0f, 0.0f };
 
+	auto _normal1 = { 0.0f, 0.0f, 1.0f };
+	auto _normal2 = { 0.0f, 0.0f, -1.0f };
+
 	m_Verticies.insert(m_Verticies.end(), _v1); 
 	m_Verticies.insert(m_Verticies.end(), _v2); 
 	m_Verticies.insert(m_Verticies.end(), _v3); 
-
 	m_Verticies.insert(m_Verticies.end(), _v1); 
 	m_Verticies.insert(m_Verticies.end(), _v3); 
 	m_Verticies.insert(m_Verticies.end(), _v4); 
+
+	m_Normals.insert(m_Normals.end(), _normal1);
+	m_Normals.insert(m_Normals.end(), _normal1);
+	m_Normals.insert(m_Normals.end(), _normal1);
+	m_Normals.insert(m_Normals.end(), _normal2);
+	m_Normals.insert(m_Normals.end(), _normal2);
+	m_Normals.insert(m_Normals.end(), _normal2);
 
 	m_TextureCoordinates.insert(m_TextureCoordinates.end(), _tc1);
 	m_TextureCoordinates.insert(m_TextureCoordinates.end(), _tc2);

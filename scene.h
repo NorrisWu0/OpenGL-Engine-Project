@@ -8,7 +8,7 @@
 
 class GameObject;
 class Input;
-struct Configuration;
+class Configuration;
 
 class Scene
 {
@@ -16,7 +16,7 @@ public:
 	Scene(const char* _id);
 	~Scene();
 
-	virtual void Update(const double _deltaTime, const Input* _input, const Configuration* _config) = 0;
+	virtual void Update(const double _deltaTime, const Input* _input, Configuration* _config) = 0;
 
 	GameObject* GetGameObject(const char* _id) const;
 	std::vector<GameObject*> GetGameObjects() const;
@@ -30,6 +30,8 @@ public:
 protected:
 	std::map<std::string, GameObject*> m_GameObjects;
 	const char* m_ID;
+	
+	bool m_CameraRotationLock = false;
 
 	float m_RotationSensitivity = 0.25f;
 	float m_CameraYaw = -90.0f;

@@ -13,7 +13,6 @@
 #include <chrono>
 #include <thread>
 #include <stack>
-#include "main.h"
 
 int main(void)
 {

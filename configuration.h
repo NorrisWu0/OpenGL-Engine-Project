@@ -1,20 +1,24 @@
 #pragma once
 
-struct Configuration
+class Configuration
 {
-	bool renderWireframe = false;
+	public:
+	bool RenderWireframe = false;
 
-	int screenWidth = 1600;
-	int screenHeight = 900;
-	int yUnits = 5;
-	int zUnits = 10000;
-	float fov = 90.f;
+	int ScreenWidth = 1600;
+	int ScreenHeight = 900;
+	int YUnits = 5;
+	int ZUnits = 10000;
+	float FOV = 90.f;
 
-	enum class Projection
+	enum class ProjectionType
 	{
 		Orthographic,
 		Perspective
 	};
 
-	Projection projection = Projection::Perspective;
+	ProjectionType Projection = ProjectionType::Perspective;
+	
+	void SetProjection(ProjectionType _type);
+
 };

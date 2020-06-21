@@ -9,7 +9,6 @@
 #include "Texture.h"
 
 class Mesh;
-struct Configuration;
 
 
 class ShaderProgram_Textured3D : public ShaderProgram

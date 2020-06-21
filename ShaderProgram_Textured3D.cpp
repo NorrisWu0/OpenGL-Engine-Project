@@ -66,26 +66,26 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 
 	#pragma region Projection
 	GLint _projectionValue = glGetUniformLocation(GetProgram(), "projection");
-	expect(_projectionValue!= -1, "Failed to find projection variable in shader");
+	expect(_projectionValue != -1, "Failed to find projection variable in shader");
 	glUniformMatrix4fv(_projectionValue, 1, GL_FALSE, &(projection)[0][0]);
 	#pragma endregion
 
 	#pragma region Ambient Light
 	GLint _ambientLightValue = glGetUniformLocation(GetProgram(), "ambientLight");
 	expect(_ambientLightValue != -1, "Failed to find ambientLight variable in shader");
-	const glm::vec3 _ambientLightColor( .1f, 0.1f, 0.1f);
+	const glm::vec3 _ambientLightColor(.1f, 0.1f, 0.1f);
 	glUniform3fv(_ambientLightValue, 1, (float*)(&_ambientLightColor));
 	#pragma endregion
 
 	#pragma region Light Position
-	const glm::vec3 _lightPosition(0.0, 1.0, -3.5);
+	const glm::vec3 _lightPosition(0.0, 23.0, 0.0);
 	GLint _lightPositionValue = glGetUniformLocation(GetProgram(), "lightPosition");
 	expect(_lightPositionValue != -1, "Failed to find light position variable in shader.");
 	glUniform3fv(_lightPositionValue, 1, (float*)(&_lightPosition));
 	#pragma endregion
 
 	#pragma region Light Color
-	const glm::vec3 _lightColor(1.0, 1.0, 1.0);
+	const glm::vec3 _lightColor(0.8, 0.8, 0.8);
 	GLint _lightColorValue = glGetUniformLocation(GetProgram(), "lightColor");
 	expect(_lightColorValue != -1, "Failed to find light position value.");
 	glUniform3fv(_lightColorValue, 1, (float*)(&_lightColor));
@@ -128,7 +128,7 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 	glUniform1i(_imageValue, 0);
 	#pragma endregion
 
-	if (_config->renderWireframe)
+	if (_config->RenderWireframe)
 		glDrawArrays(GL_LINE_LOOP, 0, GLsizei(_mesh->verticies().size() / 2));
 	else
 		glDrawArrays(GL_TRIANGLES, 0, GLsizei(_mesh->verticies().size() / 2));

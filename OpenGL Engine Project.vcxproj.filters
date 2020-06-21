@@ -25,55 +25,15 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Source Files\Assets\Textures</Filter>
     </ClCompile>
-    <ClCompile Include="Mesh_3D_Pentagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Triangle.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Cube.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Octagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_SemiOctagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Square.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Triangle.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Mesh_File_OBJ.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_RightTriangle.cpp">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClCompile>
     <ClCompile Include="ShaderProgram_Textured2D.cpp">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClCompile>
-    <ClCompile Include="Mesh_2D_Pentagon.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Tetrahedron.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Sphere.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Icosphere.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
     <ClCompile Include="Shader.cpp">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClCompile>
-    <ClCompile Include="Asset.cpp" />
-    <ClCompile Include="Assets.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Scene_Display.cpp">
       <Filter>Source Files\Scenes</Filter>
@@ -81,17 +41,56 @@
     <ClCompile Include="Cube.cpp">
       <Filter>Source Files\GameObjects</Filter>
     </ClCompile>
+    <ClCompile Include="Asset.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Assets.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="configuration.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\Assets</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Octagon.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Pentagon.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_RightTriangle.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_SemiOctagon.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Square.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_2D_Triangle.cpp">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Cube.cpp">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Tetrahedron.cpp">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_Quad.cpp">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh_3D_InvertedCube.cpp">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="TestChamber.cpp">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Engine.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="main.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="ShaderProgram_Textured2D.h">
       <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
@@ -111,72 +110,77 @@
       <Filter>Source Files\Assets\Textures</Filter>
     </ClInclude>
     <ClInclude Include="Cube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_Octagon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_Pentagon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_RightTriangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_SemiOctagon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_Square.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_Triangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Cube.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Pentagon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Sphere.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Tetrahedron.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Triangle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene_Display.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Icosphere.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Shader.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Asset.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
     <ClInclude Include="Assets.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Asset.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Expectations.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Source Files\Assets\Meshes</Filter>
     </ClInclude>
     <ClInclude Include="Mesh_File_OBJ.h">
-      <Filter>Header Files</Filter>
+      <Filter>Source Files\Assets\Meshes</Filter>
     </ClInclude>
-    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="Scene.h">
+      <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Display.h">
+      <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Source Files\Assets\Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Configuration.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Octagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Pentagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_RightTriangle.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_SemiOctagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Square.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_2D_Triangle.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Cube.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Tetrahedron.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_Quad.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh_3D_InvertedCube.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="TestChamber.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
@@ -208,6 +212,12 @@
     </Filter>
     <Filter Include="Source Files\Assets\Textures">
       <UniqueIdentifier>{e348cf36-464f-4318-b597-a2ecdb1c4f80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets\Meshes\2D">
+      <UniqueIdentifier>{fe1322a3-65ae-404b-9c7b-4a80f5da2db9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Assets\Meshes\3D">
+      <UniqueIdentifier>{08da1aa8-75b5-4e47-b318-4eea1bec983c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

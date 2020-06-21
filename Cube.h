@@ -8,7 +8,7 @@
 
 class Cube : public GameObject
 {
-public:
+	public:
 	Cube(const char* _id);
 	~Cube();
 	

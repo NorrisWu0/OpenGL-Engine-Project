@@ -4,14 +4,18 @@
 #include "Scene.h"
 #include "Input.h"
 
-#include "Cube.h"
-
 
 class Scene_Display : public Scene
 {
-public: 
+	public: 
 	Scene_Display();
 	~Scene_Display();
 
-	virtual void Update(const double _deltaTime, const Input* _input, const Configuration* _config) override;
+	virtual void Update(const double _deltaTime, const Input* _input, Configuration* _config) override;
+
+	private:
+	float m_Time;
+
+	void ControlCamera(const double _deltaTime, const Input* _input, Configuration* _config);
+	void ControlGameObjects(const double _deltaTime, const Input* _input, Configuration* _config);
 };

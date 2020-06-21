@@ -8,7 +8,6 @@
 #include "Mesh.h"
 
 class Mesh;
-struct Configuration;
 
 
 class ShaderProgram_Colored3D : public ShaderProgram

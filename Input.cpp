@@ -85,6 +85,12 @@ Input::Input(GLFWwindow* _window)
 			case GLFW_KEY_7:
 				input->SetButtonState(Button::K7, Button_State::PRESSED);
 				break;
+			case GLFW_KEY_KP_SUBTRACT:
+				input->SetButtonState(Button::MINUS, Button_State::PRESSED);
+				break;
+			case GLFW_KEY_KP_ADD:
+				input->SetButtonState(Button::PLUS, Button_State::PRESSED);
+				break;
 			}
 			break;
 
@@ -103,7 +109,6 @@ Input::Input(GLFWwindow* _window)
 			case GLFW_KEY_RIGHT:
 				input->SetButtonState(Button::RIGHT, Button_State::PRESSED);
 				break;
-
 			#pragma endregion
 
 		case GLFW_RELEASE:
@@ -182,6 +187,12 @@ Input::Input(GLFWwindow* _window)
 			case GLFW_KEY_7:
 				input->SetButtonState(Button::K7, Button_State::RELEASED);
 				break;
+			case GLFW_KEY_KP_SUBTRACT:
+				input->SetButtonState(Button::MINUS, Button_State::RELEASED);
+				break;
+			case GLFW_KEY_KP_ADD:
+				input->SetButtonState(Button::PLUS, Button_State::RELEASED);
+				break;
 
 			#pragma endregion
 
@@ -198,9 +209,7 @@ Input::Input(GLFWwindow* _window)
 			case GLFW_KEY_RIGHT:
 				input->SetButtonState(Button::RIGHT, Button_State::RELEASED);
 				break;
-
 			#pragma endregion
-
 			}
 			break;
 

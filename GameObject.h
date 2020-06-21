@@ -11,7 +11,7 @@
 
 class Assets;
 class Input;
-struct Configuration;
+class Configuration;
 class Scene;
 
 

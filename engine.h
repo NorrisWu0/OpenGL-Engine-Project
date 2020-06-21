@@ -16,7 +16,7 @@
 
 class Scene;
 class Input;
-struct Configuration;
+class Configuration;
 struct GLFWwindow;
 
 
