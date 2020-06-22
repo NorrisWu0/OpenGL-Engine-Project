@@ -1,6 +1,6 @@
 #include "Mesh_3D_Cube.h"
 
-Mesh_3D_SignPost::Mesh_3D_SignPost() : Mesh("Mesh.SignPost")
+Mesh_3D_Cube::Mesh_3D_Cube() : Mesh("Mesh.Cube")
 {
 	auto _v1 = { -0.5f, 0.5f, 0.5f };
 	auto _v2 = { -0.5f, -0.5f, 0.5f };
@@ -138,4 +138,4 @@ Mesh_3D_SignPost::Mesh_3D_SignPost() : Mesh("Mesh.SignPost")
 
 }
 
-Mesh_3D_SignPost::~Mesh_3D_SignPost() {}
+Mesh_3D_Cube::~Mesh_3D_Cube() {}

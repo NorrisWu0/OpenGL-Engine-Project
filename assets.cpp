@@ -96,7 +96,7 @@ Assets::Assets()
 	Mesh_2D_SemiOctagon* _mesh_2D_SemiOctagon = new Mesh_2D_SemiOctagon();
 	m_Assets.insert({ _mesh_2D_SemiOctagon->GetID(), _mesh_2D_SemiOctagon });
 
-	Mesh_3D_SignPost* _mesh_3D_SignPost = new Mesh_3D_SignPost();
+	Mesh_3D_Cube* _mesh_3D_SignPost = new Mesh_3D_Cube();
 	m_Assets.insert({ _mesh_3D_SignPost->GetID(), _mesh_3D_SignPost });
 
 	Mesh_3D_InvertedCube* _mesh_3D_InvertedCube = new Mesh_3D_InvertedCube();
@@ -116,35 +116,23 @@ Assets::Assets()
 	Texture* _gridBox = new Texture("Texture.GridBox", "Assets/GridBox.png");
 	m_Assets.insert({ _gridBox->GetID(), _gridBox });
 
-	Texture* _rTriangle = new Texture("Texture.RightTriangle", "Assets/RightTriangle.png");
-	m_Assets.insert({ _rTriangle->GetID(), _rTriangle });
+	Texture* _infoSign = new Texture("Texture.InfoSign", "Assets/InfoSign.png");
+	m_Assets.insert({ _infoSign->GetID(), _infoSign });
 
-	Texture* _pentagon = new Texture("Texture.Pentagon", "Assets/Pentagon.png");
-	m_Assets.insert({ _pentagon->GetID(), _pentagon });
-
-	Texture* _secureServ = new Texture("Texture.SecureServ", "Assets/SecureServ.png");
-	m_Assets.insert({ _secureServ->GetID(), _secureServ });
-
-	Texture* _secureServ2 = new Texture("Texture.SecureServ2", "Assets/SecureServ2.png");
-	m_Assets.insert({ _secureServ2->GetID(), _secureServ2 });
+	Texture* _warningSign = new Texture("Texture.WarningSign", "Assets/WarningSign.png");
+	m_Assets.insert({ _warningSign->GetID(), _warningSign });
 
 	Texture* _allSeeingEye = new Texture("Texture.AllSeeingEye", "Assets/AllSeeingEye.png");
 	m_Assets.insert({ _allSeeingEye->GetID(), _allSeeingEye });
 
-	Texture* _crate = new Texture("Texture.Crate", "Assets/Texture.Crate.jpg");
-	m_Assets.insert({ _crate->GetID(), _crate });
-	
-	Texture* _markedCrate = new Texture("Texture.MarkedCrate", "Assets/Texture.Crate_With_Sides_Marked.jpg");
-	m_Assets.insert({ _markedCrate->GetID(), _markedCrate });
+	Texture* _dropTrap = new Texture("Texture.DropTrap", "Assets/DropTrap.png");
+	m_Assets.insert({ _dropTrap->GetID(), _dropTrap });
 
-	Texture* _mcGrass = new Texture("Texture.MCGrass", "Assets/MC.Grass.png");
-	m_Assets.insert({ _mcGrass->GetID(), _mcGrass });
-	
-	Texture* _wall = new Texture("Texture.Wall", "Assets/Texture.Wall.jpg");
-	m_Assets.insert({ _wall->GetID(), _wall });
+	Texture* _lava = new Texture("Texture.Lava", "Assets/Lava.jpg");
+	m_Assets.insert({ _lava->GetID(), _lava });
 
-	Texture* _texture_robot = new Texture("Texture.Robot", "Assets/Robot.Diffuse.jpg", true);
-	m_Assets.insert({ _texture_robot->GetID(), _texture_robot });
+	Texture* _afterlife = new Texture("Texture.Afterlife", "Assets/Afterlife.png");
+	m_Assets.insert({ _afterlife->GetID(), _afterlife });
 	#pragma endregion
 
 }

@@ -33,6 +33,8 @@ public:
 	glm::mat4x4 Camera (const Scene* _scene, const Configuration* _config) const;
 	glm::mat4x4 Projection (const Scene* _scene, const Configuration* _config) const;
 
+	void SetActive(bool _state);
+
 	void SetPosition(const glm::vec3 _position);
 	glm::vec3 GetPosition();
 	void SetRotation(const glm::vec3 _rotation);
@@ -42,7 +44,7 @@ public:
 
 protected:
 	const char* m_ID;
-
+	bool m_IsActive = true;
 	double m_TotalTime = 0;
 
 	glm::vec3 m_Position = glm::vec3(0.f, 0.f, 0.f);

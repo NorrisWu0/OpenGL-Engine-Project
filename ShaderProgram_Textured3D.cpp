@@ -73,8 +73,7 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 	#pragma region Ambient Light
 	GLint _ambientLightValue = glGetUniformLocation(GetProgram(), "ambientLight");
 	expect(_ambientLightValue != -1, "Failed to find ambientLight variable in shader");
-	const glm::vec3 _ambientLightColor(.1f, 0.1f, 0.1f);
-	glUniform3fv(_ambientLightValue, 1, (float*)(&_ambientLightColor));
+	glUniform3fv(_ambientLightValue, 1, (float*)(&m_AmbientColor));
 	#pragma endregion
 
 	#pragma region Light Position
@@ -85,10 +84,9 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 	#pragma endregion
 
 	#pragma region Light Color
-	const glm::vec3 _lightColor(0.8, 0.8, 0.8);
 	GLint _lightColorValue = glGetUniformLocation(GetProgram(), "lightColor");
 	expect(_lightColorValue != -1, "Failed to find light position value.");
-	glUniform3fv(_lightColorValue, 1, (float*)(&_lightColor));
+	glUniform3fv(_lightColorValue, 1, (float*)(&m_LightColor));
 	#pragma endregion
 
 
@@ -137,3 +135,6 @@ void ShaderProgram_Textured3D::Render(const Configuration* _config, const Mesh* 
 	glDeleteBuffers(1, &_vboIndex);
 	glDeleteTextures(1, &_textureValue);
 }
+
+void ShaderProgram_Textured3D::SetAmbientColor(glm::vec3 _color) { m_AmbientColor = _color; }
+void ShaderProgram_Textured3D::SetLightColor(glm::vec3 _color) { m_LightColor = _color; }

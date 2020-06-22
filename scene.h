@@ -31,8 +31,6 @@ protected:
 	std::map<std::string, GameObject*> m_GameObjects;
 	const char* m_ID;
 	
-	bool m_CameraRotationLock = false;
-
 	float m_RotationSensitivity = 0.25f;
 	float m_CameraYaw = -90.0f;
 	float m_CameraPitch = 0.0f;

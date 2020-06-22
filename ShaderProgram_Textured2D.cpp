@@ -33,12 +33,12 @@ void ShaderProgram_Textured2D::Render(const Configuration* _config, const Mesh* 
 	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * _mesh->normals().size(), _mesh->normals().data(), GL_STATIC_DRAW);
 	#pragma endregion
 
-	#pragma region Vertex Normal
-	GLint _vertexNormalValue = glGetAttribLocation(GetProgram(), "vertexNormal");
-	expect(_vertexNormalValue != -1, "Failed to get vertex normal value.");
-	glEnableVertexAttribArray(_vertexNormalValue);
-	glVertexAttribPointer(_vertexNormalValue, 2, GL_FLOAT, GL_FALSE, 0, NULL);
-	#pragma endregion
+	//#pragma region Vertex Normal
+	//GLint _vertexNormalValue = glGetAttribLocation(GetProgram(), "vertexNormal");
+	//expect(_vertexNormalValue != -1, "Failed to get vertex normal value.");
+	//glEnableVertexAttribArray(_vertexNormalValue);
+	//glVertexAttribPointer(_vertexNormalValue, 2, GL_FLOAT, GL_FALSE, 0, NULL);
+	//#pragma endregion
 
 	#pragma region Translation
 	GLint _translatedValue = glGetUniformLocation(GetProgram(), "translation");
@@ -70,27 +70,26 @@ void ShaderProgram_Textured2D::Render(const Configuration* _config, const Mesh* 
 	glUniformMatrix4fv(_projectionValue, 1, GL_FALSE, &(projection)[0][0]);
 	#pragma endregion
 
-	#pragma region Ambient Light
-	GLint _ambientLightValue = glGetUniformLocation(GetProgram(), "ambientLight");
-	expect(_ambientLightValue != -1, "Failed to find ambientLight variable in shader");
-	const glm::vec3 _ambientLightColor(.1f, 0.1f, 0.1f);
-	glUniform3fv(_ambientLightValue, 1, (float*)(&_ambientLightColor));
-	#pragma endregion
+	//#pragma region Ambient Light
+	//GLint _ambientLightValue = glGetUniformLocation(GetProgram(), "ambientLight");
+	//expect(_ambientLightValue != -1, "Failed to find ambientLight variable in shader");
+	//const glm::vec3 _ambientLightColor(1.0f, 1.0f, 1.0f);
+	//glUniform3fv(_ambientLightValue, 1, (float*)(&_ambientLightColor));
+	//#pragma endregion
 
-	#pragma region Light Position
-	const glm::vec3 _lightPosition(0.0, 1.0, -3.5);
-	GLint _lightPositionValue = glGetUniformLocation(GetProgram(), "lightPosition");
-	expect(_lightPositionValue != -1, "Failed to find light position variable in shader.");
-	glUniform3fv(_lightPositionValue, 1, (float*)(&_lightPosition));
-	#pragma endregion
+	//#pragma region Light Position
+	//const glm::vec3 _lightPosition(0.0, 23.0, 0.0);
+	//GLint _lightPositionValue = glGetUniformLocation(GetProgram(), "lightPosition");
+	//expect(_lightPositionValue != -1, "Failed to find light position variable in shader.");
+	//glUniform3fv(_lightPositionValue, 1, (float*)(&_lightPosition));
+	//#pragma endregion
 
-	#pragma region Light Color
-	const glm::vec3 _lightColor(1.0, 1.0, 1.0);
-	GLint _lightColorValue = glGetUniformLocation(GetProgram(), "lightColor");
-	expect(_lightColorValue != -1, "Failed to find light position value.");
-	glUniform3fv(_lightColorValue, 1, (float*)(&_lightColor));
-	#pragma endregion
-
+	//#pragma region Light Color
+	//const glm::vec3 _lightColor(1.0, 1.0, 1.0);
+	//GLint _lightColorValue = glGetUniformLocation(GetProgram(), "lightColor");
+	//expect(_lightColorValue != -1, "Failed to find light position value.");
+	//glUniform3fv(_lightColorValue, 1, (float*)(&_lightColor));
+	//#pragma endregion
 
 	#pragma region Texture Buffer Object
 	GLuint _tboIndex;

@@ -66,6 +66,11 @@ glm::mat4x4 GameObject::Projection(const Scene*, const Configuration* _config) c
 		throw new std::exception("Unhandled projection type.");
 }
 
+void GameObject::SetActive(bool _state)
+{
+	m_IsActive = _state;
+}
+
 void GameObject::SetPosition(const glm::vec3 _position) { m_Position = _position; }
 glm::vec3 GameObject::GetPosition() { return m_Position; }
 

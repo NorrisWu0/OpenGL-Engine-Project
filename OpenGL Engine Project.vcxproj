@@ -158,7 +158,9 @@
     <ClCompile Include="Assets.cpp" />
     <ClCompile Include="configuration.cpp" />
     <ClCompile Include="Cube.cpp" />
+    <ClCompile Include="DropTrap.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Lava.cpp" />
     <ClCompile Include="Mesh_2D_Pentagon.cpp" />
     <ClCompile Include="Mesh_2D_RightTriangle.cpp" />
     <ClCompile Include="Mesh_3D_InvertedCube.cpp" />
@@ -190,7 +192,9 @@
     <ClInclude Include="Asset.h" />
     <ClInclude Include="Assets.h" />
     <ClInclude Include="Cube.h" />
+    <ClInclude Include="DropTrap.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Lava.h" />
     <ClInclude Include="Mesh_2D_Pentagon.h" />
     <ClInclude Include="Mesh_2D_RightTriangle.h" />
     <ClInclude Include="Mesh_3D_InvertedCube.h" />

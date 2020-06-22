@@ -4,7 +4,7 @@
 
 Cube::Cube(const char* _id) : GameObject(_id) 
 {
-	SetPosition(glm::vec3((float)(rand() % 20 - 10), (float)(rand() % 20 - 10), (float)(rand() % 20 - 10)));
+	SetPosition({ (float)(rand() % 20 - 10), (float)(rand() % 20 - 10), (float)(rand() % 20 - 10) });
 }
 
 Cube::~Cube() {}

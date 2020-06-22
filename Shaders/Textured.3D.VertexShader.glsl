@@ -23,5 +23,5 @@ void main()
     gl_Position = _vertexPositionTransformed;
     interpolatedTextureCoordinate = vertexTextureCoordinate;
     normal = (rotation * scale * vec4(vertexNormal, 1.0)).xyz;
-    fragmentPosition = (_model * vec4(vertexPosition, 1.0)).xyz;
+    fragmentPosition = (rotation * scale * vec4(vertexPosition, 1.0)).xyz;
 }

@@ -19,8 +19,8 @@ Mesh_3D_InvertedCube::Mesh_3D_InvertedCube() : Mesh("Mesh.InvertedCube")
 	auto _top = { 0.0f, 1.0f, 0.0f };
 	auto _bottom = { 0.0f, -1.0f, 0.0f };
 
-	auto _width = 1.0f * 25.0f;
-	auto _height = 1.0f * 25.0f;
+	auto _width = 1.0f * 20.0f;
+	auto _height = 1.0f * 20.0f;
 	for (int _faceIndex = 0; _faceIndex < 6; ++_faceIndex)
 	{
 		auto tl = { _faceIndex * _width, _faceIndex * _height };

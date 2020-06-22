@@ -15,6 +15,7 @@ class Scene_TestChamber : public Scene
 
 	private:
 	float m_Time;
+	bool m_IsDead = false;
 
 	void ControlCamera(const double _deltaTime, const Input* _input, Configuration* _config);
 	void ControlGameObjects(const double _deltaTime, const Input* _input, Configuration* _config);
