@@ -72,8 +72,8 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependencies\glm;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;$(SolutionDir)Dependencies\glew-2.1.0\include\GL;$(SolutionDir)OpenGL Engine Project\Source;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;$(SolutionDir)Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -82,8 +82,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>Dependencies\glm;Dependencies\stb;Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;Dependencies\glew-2.1.0\include\GL;$(IncludePath)</IncludePath>
-    <LibraryPath>Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)Dependencies\glm;$(SolutionDir)Dependencies\stb;$(SolutionDir)Dependencies\glfw-3.3.2.bin.WIN64\include\GLFW;$(SolutionDir)Dependencies\glew-2.1.0\include\GL;$(SolutionDir)OpenGL Engine Project\Source;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)Dependencies\glfw-3.3.2.bin.WIN64\lib-vc2019;$(SolutionDir)Dependencies\glew-2.1.0\lib\Release\Win32;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
@@ -154,74 +154,74 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Asset.cpp" />
-    <ClCompile Include="Assets.cpp" />
-    <ClCompile Include="configuration.cpp" />
-    <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="DropTrap.cpp" />
-    <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Lava.cpp" />
-    <ClCompile Include="Mesh_2D_Pentagon.cpp" />
-    <ClCompile Include="Mesh_2D_RightTriangle.cpp" />
-    <ClCompile Include="Mesh_3D_InvertedCube.cpp" />
-    <ClCompile Include="Mesh_3D_Quad.cpp" />
-    <ClCompile Include="Mesh_3D_Tetrahedron.cpp" />
-    <ClCompile Include="Mesh_File_OBJ.cpp" />
-    <ClCompile Include="SignPost.cpp" />
-    <ClCompile Include="TestChamber.cpp" />
-    <ClCompile Include="ShaderProgram_Colored2D.cpp" />
-    <ClCompile Include="Engine.cpp" />
-    <ClCompile Include="GameObject.cpp" />
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Mesh.cpp" />
-    <ClCompile Include="Mesh_3D_Cube.cpp" />
-    <ClCompile Include="Mesh_2D_Octagon.cpp" />
-    <ClCompile Include="Scene_TestChamber.cpp" />
-    <ClCompile Include="Mesh_2D_SemiOctagon.cpp" />
-    <ClCompile Include="ShaderProgram_Colored3D.cpp" />
-    <ClCompile Include="Mesh_2D_Square.cpp" />
-    <ClCompile Include="Scene.cpp" />
-    <ClCompile Include="Shader.cpp" />
-    <ClCompile Include="ShaderProgram.cpp" />
-    <ClCompile Include="Mesh_2D_Triangle.cpp" />
-    <ClCompile Include="ShaderProgram_Textured2D.cpp" />
-    <ClCompile Include="ShaderProgram_Textured3D.cpp" />
-    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Asset.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Assets.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Configuration.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\Cube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\DropTrap.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Input.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\Lava.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Pentagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_RightTriangle.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_InvertedCube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Quad.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Tetrahedron.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_File_OBJ.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\SignPost.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\TestChamber.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Colored2D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Engine.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObject.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Main.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Mesh.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Cube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Octagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Scene\Scene_TestChamber.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_SemiOctagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Colored3D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Square.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Scene\Scene.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\Shader.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderProgram.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Triangle.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Textured2D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Textured3D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Asset.h" />
-    <ClInclude Include="Assets.h" />
-    <ClInclude Include="Cube.h" />
-    <ClInclude Include="DropTrap.h" />
-    <ClInclude Include="Input.h" />
-    <ClInclude Include="Lava.h" />
-    <ClInclude Include="Mesh_2D_Pentagon.h" />
-    <ClInclude Include="Mesh_2D_RightTriangle.h" />
-    <ClInclude Include="Mesh_3D_InvertedCube.h" />
-    <ClInclude Include="Mesh_3D_Quad.h" />
-    <ClInclude Include="Mesh_3D_Tetrahedron.h" />
-    <ClInclude Include="Mesh_File_OBJ.h" />
-    <ClInclude Include="SignPost.h" />
-    <ClInclude Include="TestChamber.h" />
-    <ClInclude Include="ShaderProgram_Colored2D.h" />
-    <ClInclude Include="Configuration.h" />
-    <ClInclude Include="Engine.h" />
-    <ClInclude Include="Expectations.h" />
-    <ClInclude Include="GameObject.h" />
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Mesh_3D_Cube.h" />
-    <ClInclude Include="Mesh_2D_Octagon.h" />
-    <ClInclude Include="Scene_TestChamber.h" />
-    <ClInclude Include="Mesh_2D_SemiOctagon.h" />
-    <ClInclude Include="ShaderProgram_Colored3D.h" />
-    <ClInclude Include="Mesh_2D_Square.h" />
-    <ClInclude Include="Scene.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="ShaderProgram.h" />
-    <ClInclude Include="Mesh_2D_Triangle.h" />
-    <ClInclude Include="ShaderProgram_Textured2D.h" />
-    <ClInclude Include="ShaderProgram_Textured3D.h" />
-    <ClInclude Include="Texture.h" />
+    <ClInclude Include="OpenGL Engine Project\Asset.h" />
+    <ClInclude Include="OpenGL Engine Project\Assets.h" />
+    <ClInclude Include="OpenGL Engine Project\Cube.h" />
+    <ClInclude Include="OpenGL Engine Project\DropTrap.h" />
+    <ClInclude Include="OpenGL Engine Project\Input.h" />
+    <ClInclude Include="OpenGL Engine Project\Lava.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Pentagon.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_RightTriangle.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_InvertedCube.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Quad.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Tetrahedron.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_File_OBJ.h" />
+    <ClInclude Include="OpenGL Engine Project\SignPost.h" />
+    <ClInclude Include="OpenGL Engine Project\TestChamber.h" />
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Colored2D.h" />
+    <ClInclude Include="OpenGL Engine Project\Configuration.h" />
+    <ClInclude Include="OpenGL Engine Project\Engine.h" />
+    <ClInclude Include="OpenGL Engine Project\Expectations.h" />
+    <ClInclude Include="OpenGL Engine Project\GameObject.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Cube.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Octagon.h" />
+    <ClInclude Include="OpenGL Engine Project\Scene_TestChamber.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_SemiOctagon.h" />
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Colored3D.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Square.h" />
+    <ClInclude Include="OpenGL Engine Project\Scene.h" />
+    <ClInclude Include="OpenGL Engine Project\Shader.h" />
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram.h" />
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Triangle.h" />
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Textured2D.h" />
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Textured3D.h" />
+    <ClInclude Include="OpenGL Engine Project\Texture.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\Colored.2D.FragmentShader.glsl" />

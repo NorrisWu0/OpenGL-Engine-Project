@@ -1,2 +1,0 @@
-C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\OpenGL Engine Project\x64\Debug\OpenGL Engine Project.exe
-C:\Users\norri\Documents\GitHub\_Game Development\Custom Engine Projects\OpenGL Engine Project\x64\Debug\OpenGL Engine Project.pdb

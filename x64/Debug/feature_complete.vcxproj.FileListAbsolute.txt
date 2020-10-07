@@ -1,2 +1,0 @@
-C:\Users\User\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\x64\Debug\feature_complete.exe
-C:\Users\User\Documents\GitHub\_Game Development\OpenGL Projects\James Tutorial File\x64\Debug\feature_complete.pdb

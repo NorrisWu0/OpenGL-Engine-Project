@@ -1,203 +1,139 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram.cpp">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram_Colored3D.cpp">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram_Colored2D.cpp">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram_Textured3D.cpp">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="Texture.cpp">
-      <Filter>Source Files\Assets\Textures</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_File_OBJ.cpp">
-      <Filter>Source Files\Assets\Meshes</Filter>
-    </ClCompile>
-    <ClCompile Include="ShaderProgram_Textured2D.cpp">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>Source Files\Assets\Shaders</Filter>
-    </ClCompile>
-    <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Cube.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Asset.cpp">
-      <Filter>Source Files\Assets</Filter>
-    </ClCompile>
-    <ClCompile Include="Assets.cpp">
-      <Filter>Source Files\Assets</Filter>
-    </ClCompile>
-    <ClCompile Include="configuration.cpp">
-      <Filter>Source Files\Assets</Filter>
-    </ClCompile>
-    <ClCompile Include="Input.cpp">
-      <Filter>Source Files\Assets</Filter>
-    </ClCompile>
-    <ClCompile Include="Engine.cpp">
-      <Filter>Source Files\Assets</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Octagon.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Pentagon.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_RightTriangle.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_SemiOctagon.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Square.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_2D_Triangle.cpp">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Cube.cpp">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Tetrahedron.cpp">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_Quad.cpp">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClCompile>
-    <ClCompile Include="Mesh_3D_InvertedCube.cpp">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClCompile>
-    <ClCompile Include="TestChamber.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene_TestChamber.cpp">
-      <Filter>Source Files\Scenes</Filter>
-    </ClCompile>
-    <ClCompile Include="SignPost.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="DropTrap.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
-    <ClCompile Include="Lava.cpp">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClCompile>
+    <ClCompile Include="OpenGL Engine Project\Main.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Asset.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Assets.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Configuration.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\Cube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\DropTrap.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Utilities\Input.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\Lava.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Pentagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_RightTriangle.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_InvertedCube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Quad.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Tetrahedron.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_File_OBJ.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\SignPost.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObjects\TestChamber.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Colored2D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Engine.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\GameObject\GameObject.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Mesh.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_3D_Cube.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Octagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Scene\Scene_TestChamber.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_SemiOctagon.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Colored3D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Square.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Scene\Scene.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\Shader.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderProgram.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Meshes\Mesh_2D_Triangle.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Textured2D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Rendering\ShaderPrograms\ShaderProgram_Textured3D.cpp" />
+    <ClCompile Include="OpenGL Engine Project\Source\Mesh\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ShaderProgram_Textured2D.h">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderProgram.h">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderProgram_Colored2D.h">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderProgram_Colored3D.h">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="ShaderProgram_Textured3D.h">
-      <Filter>Source Files\Assets\ShaderPrograms</Filter>
-    </ClInclude>
-    <ClInclude Include="Texture.h">
-      <Filter>Source Files\Assets\Textures</Filter>
-    </ClInclude>
-    <ClInclude Include="Cube.h">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Assets.h">
-      <Filter>Source Files\Assets</Filter>
-    </ClInclude>
-    <ClInclude Include="Asset.h">
-      <Filter>Source Files\Assets</Filter>
-    </ClInclude>
-    <ClInclude Include="Engine.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Expectations.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Input.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh.h">
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh.h">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_File_OBJ.h">
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Octagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Pentagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_RightTriangle.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_SemiOctagon.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Square.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_2D_Triangle.h">
+      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Cube.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_InvertedCube.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Quad.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_3D_Tetrahedron.h">
+      <Filter>Source Files\Assets\Meshes\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Source\Meshes\Mesh_File_OBJ.h">
       <Filter>Source Files\Assets\Meshes</Filter>
     </ClInclude>
-    <ClInclude Include="Scene.h">
+    <ClInclude Include="OpenGL Engine Project\Asset.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Assets.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Configuration.h">
+      <Filter>Source Files\Assets</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Cube.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\DropTrap.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Engine.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Expectations.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\GameObject.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Input.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Lava.h">
+      <Filter>Source Files\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Scene.h">
       <Filter>Source Files\Scenes</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="OpenGL Engine Project\Scene_TestChamber.h">
+      <Filter>Source Files\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL Engine Project\Shader.h">
       <Filter>Source Files\Assets\Shaders</Filter>
     </ClInclude>
-    <ClInclude Include="Configuration.h">
-      <Filter>Source Files\Assets</Filter>
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram.h">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_2D_Octagon.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Colored2D.h">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_2D_Pentagon.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Colored3D.h">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_2D_RightTriangle.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Textured2D.h">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_2D_SemiOctagon.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
+    <ClInclude Include="OpenGL Engine Project\ShaderProgram_Textured3D.h">
+      <Filter>Source Files\Assets\ShaderPrograms</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh_2D_Square.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_2D_Triangle.h">
-      <Filter>Source Files\Assets\Meshes\2D</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Cube.h">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Tetrahedron.h">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_Quad.h">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClInclude>
-    <ClInclude Include="Mesh_3D_InvertedCube.h">
-      <Filter>Source Files\Assets\Meshes\3D</Filter>
-    </ClInclude>
-    <ClInclude Include="TestChamber.h">
+    <ClInclude Include="OpenGL Engine Project\SignPost.h">
       <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="Scene_TestChamber.h">
-      <Filter>Source Files\Scenes</Filter>
-    </ClInclude>
-    <ClInclude Include="SignPost.h">
+    <ClInclude Include="OpenGL Engine Project\TestChamber.h">
       <Filter>Source Files\GameObjects</Filter>
     </ClInclude>
-    <ClInclude Include="DropTrap.h">
-      <Filter>Source Files\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Lava.h">
-      <Filter>Source Files\GameObjects</Filter>
+    <ClInclude Include="OpenGL Engine Project\Texture.h">
+      <Filter>Source Files\Assets\Textures</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
